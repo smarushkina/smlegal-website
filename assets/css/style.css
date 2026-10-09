@@ -602,3 +602,14 @@ h3{font-size:1.12rem}
 .stats--slate .stat{padding:22px 14px}
 .stats--slate .stat__n{font-size:1.9rem;margin-bottom:6px}
 .stats--slate .stat__l{font-size:.68rem}
+
+/* ===== Compact footer ===== */
+.site-footer{padding:26px 0 0;font-size:.85rem}
+.foot-row{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.site-footer .logo{margin:0}
+.site-footer .logo img{height:46px}
+.foot-contact{margin:0;line-height:1.6;color:#d4d5d8}
+.foot-links{display:flex;flex-wrap:wrap;gap:6px 22px;list-style:none;margin:0;padding:0}
+.foot-links li{margin:0}
+.foot-bottom{margin-top:18px;padding:12px 0;font-size:.74rem}
+@media (max-width:780px){.foot-row{flex-direction:column;align-items:flex-start;gap:16px}}
