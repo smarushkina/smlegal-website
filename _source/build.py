@@ -403,7 +403,6 @@ def build_home(lang):
  </aside>
 </div></section>
 <section class="mottos"><div class="wrap mottos__grid">{''.join(f'<figure class="motto reveal{" motto--dark" if i==1 else ""}"><figcaption>{esc(lbl)}</figcaption><blockquote>{esc(x)}</blockquote></figure>' for i,(lbl,x) in enumerate(zip(h['motto_labels'], h['slogans'])))}</div></section>
-<section class="stats"><div class="wrap stats__grid">{''.join(f'<div class="stat reveal"><span class="stat__n" data-count="{n}">{n}</span><span class="stat__l">{esc(l)}</span></div>' for n,l in h['stats'])}</div></section>
 <section class="section"><div class="wrap grid-2">
  <div class="reveal"><span class="eyebrow">{h['about_eb']}</span><h2>{h['about_h']}</h2>{''.join('<p>'+esc(x)+'</p>' for x in h['about_p'])}
  <a class="link-arrow" href="{rel(path, ROUTES['about'][lang])}">{t['more']}</a></div>
@@ -441,6 +440,21 @@ def testimonial(q, lang):
     role = q["role_bg"] if lang == "bg" else q["role_en"]
     return f'<blockquote class="quote reveal"><p>{T[lang]['qo']}{esc(q[lang])}{T[lang]['qc']}</p><footer><strong>{esc(name)}</strong>{esc(role)}</footer></blockquote>'
 
+CLIENTS = {
+ "bg": {"eb": "Нашите клиенти", "h": "Български и международни компании на всеки етап от развитието си",
+        "items": [("Стартъпи", "Основатели и млади екипи — от учредяването до първите инвестиции."),
+                  ("Scale-up компании", "Бързо растящи бизнеси, които навлизат на нови пазари и привличат капитал."),
+                  ("Утвърдени компании", "Развити дружества с текущи корпоративни, трудови и регулаторни нужди.")]},
+ "en": {"eb": "Our clients", "h": "Bulgarian and international companies at every stage of growth",
+        "items": [("Start-ups", "Founders and young teams — from incorporation to the first investment rounds."),
+                  ("Scale-ups", "Fast-growing businesses entering new markets and raising capital."),
+                  ("Established companies", "Mature businesses with ongoing corporate, employment and regulatory needs.")]},
+}
+def clients_band(lang):
+    c = CLIENTS[lang]
+    items = "".join(f'<div class="client-type"><h3>{esc(a)}</h3><p>{esc(b)}</p></div>' for a, b in c["items"])
+    return f'<section class="section section--tight"><div class="wrap"><div class="sec-head sec-head--center"><span class="eyebrow">{c["eb"]}</span><h2>{c["h"]}</h2></div><div class="client-types reveal">{items}</div></div></section>'
+
 def partners(lang, path):
     lis = "".join(f'<li><img src="{rel(path, "assets/img/" + f)}" alt="{esc(n)}" onerror="var s=document.createElement(\'span\');s.textContent=this.alt;this.replaceWith(s)"></li>' for n, f in PARTNERS)
     return f'<ul class="partners">{lis}</ul>'
@@ -476,10 +490,8 @@ def build_about(lang):
     hero, bc = page_hero(lang, path, [(a["h1"], path)], a["h1"], a["sub"])
     out = head(lang, path, a["title"], a["desc"], alt, schema=[bc, {"@type": "AboutPage", "url": url(path), "name": a["h1"], "about": {"@id": ORG_ID}}, person_schema(lang, path)])
     out += header(lang, path, "about", alt) + hero
-    out += '<section class="statement"><div class="wrap"><p class="reveal">' + h["statement"] + '</p></div></section>'
     out += '<section class="section"><div class="wrap">'
-    for i, (hh, ps) in enumerate(a["blocks"]):
-        out += f'<div class="grid-2 grid-2--top reveal" style="margin-bottom:70px"><div><h2>{esc(hh)}</h2></div><div>{"".join("<p>"+esc(p)+"</p>" for p in ps)}</div></div>'
+    out += '<div class="about-cols">' + "".join(f'<article class="about-col reveal"><h2>{esc(hh)}</h2>{"".join("<p>"+esc(p)+"</p>" for p in ps)}</article>' for hh, ps in a["blocks"]) + '</div>'
     out += '</div></section>'
     out += team_block(lang, path)
     out += '<section class="stats stats--slate"><div class="wrap stats__grid">' + "".join(
@@ -487,7 +499,7 @@ def build_about(lang):
     out += f'<section class="section section--white"><div class="wrap"><div class="sec-head"><span class="eyebrow">{"Ценности" if lang == "bg" else "Values"}</span><h2>{"Принципите, на които стъпваме" if lang == "bg" else "The principles we work by"}</h2></div><div class="values" style="grid-template-columns:repeat(2,1fr)">' + "".join(
         f'<div class="value"><h3>{esc(x)}</h3><p>{esc(y)}</p></div>' for x, y in h["values"]) + '</div></div></section>'
     out += f'<section class="section section--sand"><div class="wrap"><div class="sec-head sec-head--center"><span class="eyebrow">{h["q_eb"]}</span><h2>{h["q_h"]}</h2></div>{slider(lang)}</div></section>'
-    out += f'<section class="section"><div class="wrap"><div class="sec-head sec-head--center"><span class="eyebrow">{h["partners_h"]}</span></div>{partners(lang, path)}</div></section>'
+    out += clients_band(lang)
     out += cta_band(lang, path) + footer(lang, path)
     emit(path, out, lang, alt)
 
