@@ -637,3 +637,11 @@ h3{font-size:1.12rem}
 .hub__related{display:flex;flex-direction:column;justify-content:center}
 @media (max-width:780px){.hub__list--2,.hub__extra{grid-template-columns:1fr}}
 .hub__faq .hub__faq-l{font-size:.64rem;margin:0 0 6px}
+
+/* ===== Footer: no practice list, contact in the middle ===== */
+.foot-grid{grid-template-columns:1.2fr 1fr 1fr;gap:40px;align-items:start}
+.foot-contact-col{justify-self:center}
+.foot-addr{display:flex;gap:10px;align-items:flex-start;color:#d4d5d8}
+.foot-addr svg{width:16px;height:16px;flex:0 0 16px;margin-top:2px;color:var(--rose)}
+.foot-grid>div:last-child{justify-self:end}
+@media (max-width:780px){.foot-grid{grid-template-columns:1fr;gap:22px}.foot-contact-col,.foot-grid>div:last-child{justify-self:start}}
