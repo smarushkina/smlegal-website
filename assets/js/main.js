@@ -1,6 +1,10 @@
 (function(){
   var d=document, root=d.documentElement;
   root.classList.add('js');
+  /* always open a page at the top (unless a section anchor is requested) */
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
+  function toTop(){if(!location.hash||!d.getElementById(location.hash.slice(1))){try{window.scrollTo({top:0,left:0,behavior:'instant'})}catch(e){window.scrollTo(0,0)}}}
+  toTop();addEventListener('load',toTop);addEventListener('pageshow',toTop);
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* header state + scroll progress + back-to-top */
