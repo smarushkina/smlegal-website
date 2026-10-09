@@ -519,3 +519,86 @@ strong{font-weight:600;color:var(--ink)}
 }
 @media (max-width:780px){.hub__panels{padding:30px 18px 26px}.hub__head{gap:14px}.hub__icon{width:50px;height:50px;padding:10px}.hub__foot{flex-direction:column;align-items:stretch}.hub__steps{justify-content:flex-end}}
 @media (max-width:1080px){.hub__tabs{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}}
+
+/* ===== Compact, readable sizing (v2) ===== */
+body{font-size:15.5px;line-height:1.7}
+h1{font-size:clamp(1.9rem,3.4vw,2.75rem)}
+h2{font-size:clamp(1.45rem,2.3vw,1.95rem)}
+h3{font-size:1.12rem}
+.lead{font-size:1.02rem}
+.eyebrow{font-size:.66rem;margin-bottom:12px}
+.btn{padding:13px 24px;font-size:.68rem}
+.section{padding:72px 0}
+.section--tight{padding:52px 0}
+.sec-head{margin-bottom:36px}
+/* hero */
+.hero__grid{padding-top:56px;padding-bottom:120px;gap:48px}
+.hero .lead{margin-bottom:28px}
+.hero__panel{padding:34px 34px 30px}
+.hero__logo{width:min(210px,75%);margin-bottom:22px}
+.hero__contact-h{font-size:1.15rem}
+.hero__contact-p,.hero__contact li{font-size:.88rem}
+.mottos{margin-top:-80px;padding-bottom:64px}
+.motto{min-height:0;padding:30px 28px 28px}
+.motto blockquote{font-size:1.05rem}
+.motto::after{font-size:4.2rem}
+/* steps (Как работим) */
+.section--slate{padding:56px 0}
+.section--slate .sec-head{margin-bottom:28px}
+.steps{gap:26px}
+.step{padding-top:18px}
+.step::before{font-size:1.8rem;margin-bottom:10px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.88rem}
+/* inner page hero + CTA band: same compact height everywhere */
+.page-hero{padding:46px 0 42px}
+.page-hero h1{margin-bottom:10px}
+.page-hero p{font-size:.98rem}
+.crumbs{margin-bottom:14px;font-size:.66rem}
+.page-hero::before,.page-hero::after{display:none}
+.cta-band{padding:46px 0}
+.cta-band h2{font-size:clamp(1.35rem,2vw,1.7rem);margin-bottom:4px}
+.cta-band p{font-size:.95rem}
+.cta-band::before{display:none}
+.statement{padding:52px 0}
+.statement p{font-size:clamp(1.2rem,2vw,1.6rem)}
+/* about: three columns, heading above text */
+.about-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.about-col{border-top:2px solid var(--rose-d);padding-top:22px}
+.about-col h2{font-size:1.35rem;margin-bottom:14px}
+.about-col p{font-size:.95rem}
+/* client types */
+.client-types{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.client-type{background:var(--paper);border:1px solid var(--line);padding:26px 26px 22px;text-align:center;transition:transform .35s var(--ease),box-shadow .35s}
+.client-type:hover{transform:translateY(-4px);box-shadow:0 20px 40px -28px rgba(30,31,34,.35)}
+.client-type h3{font-size:1.1rem;color:var(--rose-ink)}
+.client-type p{font-size:.9rem;color:var(--muted);margin:0}
+/* misc sizing */
+.stats .stat{padding:26px 16px}.stat__n{font-size:2.3rem}
+.value{padding:24px 24px}
+.value h3{font-size:1.05rem}
+.portrait{max-width:420px}
+.slide blockquote{font-size:clamp(1.02rem,1.6vw,1.2rem);padding-top:44px}
+.slide blockquote::before{font-size:4.2rem}
+.prose{font-size:.98rem}
+.prose h2{font-size:1.45rem}
+.faq summary{font-size:1.05rem;padding:18px 50px 18px 0}
+.hub-section{padding-top:44px}
+.hub__panels{padding:40px 44px 34px;min-height:0}
+.hub__head h2{font-size:clamp(1.4rem,2vw,1.8rem)}
+.hub__lead{font-size:.98rem;margin-bottom:24px}
+.hub__icon{width:52px;height:52px;padding:10px}
+.hub__tabs button{font-size:.88rem;padding:12px 24px}
+.hub__list li{font-size:.9rem;padding:8px 0 8px 26px}
+.hub__list li::before{top:17px}
+.post h3{font-size:1.12rem}
+.post__top{height:84px}
+.card{padding:30px 26px 26px}
+.card h3{font-size:1.15rem}
+.site-footer{padding-top:56px}
+.foot-bottom{margin-top:40px}
+@media (max-width:1080px){.about-cols,.client-types{grid-template-columns:1fr;gap:28px}}
+@media (max-width:780px){body{font-size:15px}.section{padding:52px 0}.hero__grid{padding-bottom:100px}}
+.stats--slate .stat{padding:22px 14px}
+.stats--slate .stat__n{font-size:1.9rem;margin-bottom:6px}
+.stats--slate .stat__l{font-size:.68rem}
