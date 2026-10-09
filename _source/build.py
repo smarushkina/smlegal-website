@@ -227,10 +227,7 @@ def header(lang, path, active, alt_path):
 
 def footer(lang, path):
     t = T[lang]
-    pr = "".join(f'<li><a href="{rel(path, practice_path(p["key"], lang))}">{esc(p[lang]["title"])}</a></li>' for p in PRACTICES[:6])
-    pr2 = "".join(f'<li><a href="{rel(path, practice_path(p["key"], lang))}">{esc(p[lang]["title"])}</a></li>' for p in PRACTICES[6:])
     firm = "".join(f'<li><a href="{rel(path, ROUTES[k][lang])}">{l}</a></li>' for k, l in t["nav"] if k != "home")
-    firm += f'<li><a href="{rel(path, ROUTES["privacy"][lang])}">{t["privacy"]}</a></li>'
     return f"""</main>
 <footer class="site-footer">
  <div class="wrap">
@@ -238,10 +235,11 @@ def footer(lang, path):
    <div>
     {logo(rel(path, ROUTES['home'][lang]), variant='logo-rose').replace('{LOGO_PREFIX}', rel(path, 'x')[:-1])}
     <p>{t['foot_about']}</p>
-    <p>{t['address']}<br><a href="mailto:{EMAIL}">{EMAIL}</a></p>
    </div>
-   <div><h4>{t['foot_practices']}</h4><ul>{pr}</ul></div>
-   <div><h4>&nbsp;</h4><ul>{pr2}</ul></div>
+   <div class="foot-contact-col"><h4>{t['foot_visit']}</h4>
+    <p class="foot-addr">{icon('pin')}<span>{t['address']}</span></p>
+    <p class="foot-addr">{icon('mail')}<a href="mailto:{EMAIL}">{EMAIL}</a></p>
+   </div>
    <div><h4>{t['foot_firm']}</h4><ul>{firm}</ul></div>
   </div>
   <div class="foot-bottom"><span>© 2026 SM Legal — {t['brand_sub']}. {t['rights']}</span><a href="{rel(path, ROUTES['privacy'][lang])}">{t['privacy']}</a></div>
