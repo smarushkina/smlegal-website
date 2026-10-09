@@ -613,3 +613,14 @@ h3{font-size:1.12rem}
 .foot-links li{margin:0}
 .foot-bottom{margin-top:18px;padding:12px 0;font-size:.74rem}
 @media (max-width:780px){.foot-row{flex-direction:column;align-items:flex-start;gap:16px}}
+
+/* ===== Footer: full content, compact size ===== */
+.site-footer{padding:32px 0 0;font-size:.8rem;line-height:1.5}
+.foot-grid{gap:28px;grid-template-columns:1.3fr 1fr 1fr .9fr}
+.site-footer .logo{margin-bottom:10px}
+.site-footer .logo img{height:44px}
+.site-footer p{margin:0 0 8px}
+.site-footer h4{font-size:.62rem;margin-bottom:10px}
+.site-footer li{margin-bottom:4px}
+.foot-bottom{margin-top:20px;padding:12px 0;font-size:.72rem}
+@media (max-width:780px){.foot-grid{gap:18px}}
