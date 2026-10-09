@@ -624,3 +624,16 @@ h3{font-size:1.12rem}
 .site-footer li{margin-bottom:4px}
 .foot-bottom{margin-top:20px;padding:12px 0;font-size:.72rem}
 @media (max-width:780px){.foot-grid{gap:18px}}
+
+/* ===== Practice hub: FAQ below the services ===== */
+.hub__body--stack{display:block}
+.hub__list--2{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.hub__extra{display:grid;grid-template-columns:1fr 280px;gap:18px;margin-top:26px;align-items:stretch}
+.hub__extra:not(:has(.hub__related)){grid-template-columns:1fr}
+.hub__faq{background:var(--sand);border:1px solid var(--line);border-left:3px solid var(--rose-d);padding:18px 22px}
+.hub__faq-l{font-size:.64rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-ink);margin:0 0 6px}
+.hub__q{font-size:1rem;margin-bottom:6px}
+.hub__faq p:last-child{margin:0}
+.hub__related{display:flex;flex-direction:column;justify-content:center}
+@media (max-width:780px){.hub__list--2,.hub__extra{grid-template-columns:1fr}}
+.hub__faq .hub__faq-l{font-size:.64rem;margin:0 0 6px}
