@@ -212,8 +212,7 @@ PRACTICES_2 = [
    "Участие в преговори",
    "Договори за наем на жилищни и търговски обекти",
    "Представителство пред административни органи",
-   "Структуриране на придобиването на недвижими имоти",
-   "Договори за строителство и за учредяване на право на строеж"
+   "Структуриране на придобиването на недвижими имоти"
   ],
   "approach": "Работим в координация с нотариуси, брокери, банки и технически специалисти, така че клиентът да разполага с единен център за правна координация на цялата сделка. Още след първоначалната проверка предоставяме ясен анализ на рисковете и конкретни препоръки.",
   "faq": [
@@ -241,8 +240,7 @@ PRACTICES_2 = [
    "Assistance during negotiations",
    "Residential and commercial lease agreements",
    "Representation before administrative authorities",
-   "Structuring and advising on real estate acquisitions",
-   "Construction contracts and building rights"
+   "Structuring and advising on real estate acquisitions"
   ],
   "approach": "We work in coordination with notaries, brokers, banks and engineers, so that the client has a single point of legal coordination for the entire transaction. We provide a clear list of risks and recommendations immediately after the initial review.",
   "faq": [
