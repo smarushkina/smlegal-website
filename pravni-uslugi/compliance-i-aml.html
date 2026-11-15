@@ -23,9 +23,8 @@
 <meta name="theme-color" content="#4e525a">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="preload" href="../assets/fonts/raleway-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/fonts.css">
 <link rel="stylesheet" href="../assets/css/style.css">
 <script type="application/ld+json">
 {
@@ -268,10 +267,25 @@
    </div>
    <div><h4>Кантората</h4><ul><li><a href="../za-nas.html">За нас</a></li><li><a href="../pravni-uslugi.html">Правни услуги</a></li><li><a href="../publikatsii.html">Публикации</a></li><li><a href="../kontakti.html">Контакти</a></li></ul></div>
   </div>
-  <div class="foot-bottom"><span>© 2026 SM Legal — Адвокатска кантора Марушкина. Всички права запазени.</span><a href="../poveritelnost.html">Политика за поверителност</a></div>
+  <div class="foot-bottom"><span>© 2026 SM Legal — Адвокатска кантора Марушкина. Всички права запазени.</span><span class="foot-links"><a href="../poveritelnost.html">Политика за поверителност</a><button type="button" class="linklike" data-cookie-open>Настройки за бисквитки</button></span></div>
  </div>
 </footer>
 <a class="to-top" href="#main" aria-label="Към началото"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+<div class="cookie" id="cookie" role="dialog" aria-modal="false" aria-labelledby="cookie-h" data-ga="" hidden>
+ <div class="cookie__in">
+  <div class="cookie__txt"><h2 id="cookie-h">Бисквитки</h2><p>Използваме само необходимите за работата на сайта технически средства. С ваше съгласие бихме използвали и аналитични бисквитки, за да подобряваме сайта. <a href="../poveritelnost.html#cookies">Научете повече</a></p></div>
+  <div class="cookie__opts" id="cookie-opts" hidden>
+   <label class="cookie__opt"><input type="checkbox" checked disabled><span><strong>Необходими</strong>Запомнят избора ви за бисквитките. Винаги активни.</span></label>
+   <label class="cookie__opt"><input type="checkbox" data-cookie-analytics><span><strong>Аналитични</strong>Анонимна статистика за посещенията (Google Analytics). Само с ваше съгласие.</span></label>
+  </div>
+  <div class="cookie__btns">
+   <button type="button" class="btn btn--ghost" data-cookie="settings" aria-controls="cookie-opts" aria-expanded="false">Настройки</button>
+   <button type="button" class="btn btn--ghost" data-cookie="reject">Само необходимите</button>
+   <button type="button" class="btn btn--ghost" data-cookie="save" hidden>Запази избора</button>
+   <button type="button" class="btn" data-cookie="accept">Приемам всички</button>
+  </div>
+ </div>
+</div>
 <script src="../assets/js/main.js" defer></script>
 </body>
 </html>

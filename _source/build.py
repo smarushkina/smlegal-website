@@ -6,10 +6,14 @@ from content_practice2 import PRACTICES_2
 from content_insights import INSIGHTS
 
 SITE = "https://smlegal.bg"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dist")
 PRACTICES = PRACTICES_1 + PRACTICES_2
 NEW_KEYS = {"startups", "tax", "compliance"}
 EMAIL = "office@smlegal.bg"
+# Google Analytics 4 measurement ID (e.g. "G-XXXXXXX"). Leave empty to run without analytics.
+# Analytics loads ONLY after the visitor accepts analytics cookies in the cookie banner.
+GA_ID = ""
 TODAY = datetime.date(2026, 10, 6).isoformat()
 P = {p["key"]: p for p in PRACTICES}
 esc = html.escape
@@ -56,6 +60,10 @@ T = {
   "cta_band_p": "Свържете се с нас — ще отговорим в рамките на един работен ден.",
   "filter_all": "Всички", "filter_news": "Новини", "filter_articles": "Статии",
   "author": "Силвия Марушкина", "author_role": "Адвокат, основател на SM Legal",
+  "ck_h": "Бисквитки", "ck_p": "Използваме само необходимите за работата на сайта технически средства. С ваше съгласие бихме използвали и аналитични бисквитки, за да подобряваме сайта.",
+  "ck_more": "Научете повече", "ck_accept": "Приемам всички", "ck_reject": "Само необходимите", "ck_settings": "Настройки",
+  "ck_save": "Запази избора", "ck_nec": "Необходими", "ck_nec_d": "Запомнят избора ви за бисквитките. Винаги активни.",
+  "ck_an": "Аналитични", "ck_an_d": "Анонимна статистика за посещенията (Google Analytics). Само с ваше съгласие.", "ck_link": "Настройки за бисквитки",
   "qo": "„", "qc": "“", "locale": "bg_BG", "months": ["януари","февруари","март","април","май","юни","юли","август","септември","октомври","ноември","декември"],
  },
  "en": {
@@ -76,6 +84,10 @@ T = {
   "cta_band_p": "Get in touch — we will respond within one business day.",
   "filter_all": "All", "filter_news": "News", "filter_articles": "Articles",
   "author": "Sylvia Marushkina", "author_role": "Attorney-at-law, Founder of SM Legal",
+  "ck_h": "Cookies", "ck_p": "We only use the technical means needed for this website to work. With your consent, we would also use analytics cookies to improve the site.",
+  "ck_more": "Learn more", "ck_accept": "Accept all", "ck_reject": "Necessary only", "ck_settings": "Settings",
+  "ck_save": "Save choice", "ck_nec": "Necessary", "ck_nec_d": "Remember your cookie choice. Always active.",
+  "ck_an": "Analytics", "ck_an_d": "Anonymous visit statistics (Google Analytics). Only with your consent.", "ck_link": "Cookie settings",
   "qo": "“", "qc": "”", "locale": "en_GB", "months": ["January","February","March","April","May","June","July","August","September","October","November","December"],
  },
 }
@@ -184,9 +196,8 @@ def head(lang, path, title, desc, alt_path=None, og_type="website", schema=None,
 <meta name="theme-color" content="#4e525a">
 <link rel="icon" href="{fav}" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{rel(path, 'assets/img/apple-touch-icon.png')}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="preload" href="{rel(path, 'assets/fonts/raleway-cyrillic-400-normal.woff2')}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{rel(path, 'assets/css/fonts.css')}">
 <link rel="stylesheet" href="{css}">
 <script type="application/ld+json">
 {ld}
@@ -242,14 +253,33 @@ def footer(lang, path):
    </div>
    <div><h4>{t['foot_firm']}</h4><ul>{firm}</ul></div>
   </div>
-  <div class="foot-bottom"><span>© 2026 SM Legal — {t['brand_sub']}. {t['rights']}</span><a href="{rel(path, ROUTES['privacy'][lang])}">{t['privacy']}</a></div>
+  <div class="foot-bottom"><span>© 2026 SM Legal — {t['brand_sub']}. {t['rights']}</span><span class="foot-links"><a href="{rel(path, ROUTES['privacy'][lang])}">{t['privacy']}</a><button type="button" class="linklike" data-cookie-open>{t['ck_link']}</button></span></div>
  </div>
 </footer>
 <a class="to-top" href="#main" aria-label="{t['back_top']}">{icon('up')}</a>
+{cookie_banner(lang, path)}
 <script src="{rel(path, 'assets/js/main.js')}" defer></script>
 </body>
 </html>
 """
+
+def cookie_banner(lang, path):
+    t = T[lang]
+    return f"""<div class="cookie" id="cookie" role="dialog" aria-modal="false" aria-labelledby="cookie-h" data-ga="{GA_ID}" hidden>
+ <div class="cookie__in">
+  <div class="cookie__txt"><h2 id="cookie-h">{t['ck_h']}</h2><p>{t['ck_p']} <a href="{rel(path, ROUTES['privacy'][lang])}#cookies">{t['ck_more']}</a></p></div>
+  <div class="cookie__opts" id="cookie-opts" hidden>
+   <label class="cookie__opt"><input type="checkbox" checked disabled><span><strong>{t['ck_nec']}</strong>{t['ck_nec_d']}</span></label>
+   <label class="cookie__opt"><input type="checkbox" data-cookie-analytics><span><strong>{t['ck_an']}</strong>{t['ck_an_d']}</span></label>
+  </div>
+  <div class="cookie__btns">
+   <button type="button" class="btn btn--ghost" data-cookie="settings" aria-controls="cookie-opts" aria-expanded="false">{t['ck_settings']}</button>
+   <button type="button" class="btn btn--ghost" data-cookie="reject">{t['ck_reject']}</button>
+   <button type="button" class="btn btn--ghost" data-cookie="save" hidden>{t['ck_save']}</button>
+   <button type="button" class="btn" data-cookie="accept">{t['ck_accept']}</button>
+  </div>
+ </div>
+</div>"""
 
 def crumbs(lang, path, trail):
     """trail: list of (label, path or None)"""
@@ -697,18 +727,24 @@ CONTACT = {
  "bg": {"title": "Контакти — заявете консултация | SM Legal, София",
   "desc": "Свържете се с адвокатска кантора SM Legal в София — ул. „Добротица Деспот“ 41. Заявете консултация по търговско, трудово, имиграционно право и други.",
   "h1": "Контакти", "sub": "Опишете накратко вашия въпрос и ще се свържем с вас в рамките на един работен ден.",
-  "form_h": "Заявка за консултация", "name": "Име и фамилия", "email": "Имейл", "phone": "Телефон", "company": "Компания",
-  "topic": "Област", "topic_any": "Изберете (по желание)", "msg": "Съобщение",
-  "consent": "Съгласен/съгласна съм предоставените данни да бъдат обработвани с цел отговор на запитването ми съгласно", "send": "Изпрати",
-  "ok": "Благодарим ви! Съобщението беше изпратено успешно. Ще се свържем с вас скоро.", "err": "Възникна грешка при изпращането. Моля, пишете ни на office@smlegal.bg.",
+  "form_h": "Заявка за консултация",
+  "mail_p": "Изпратете ни кратко описание на въпроса си — ще получите отговор в рамките на един работен ден. За по-бърза оценка посочете:",
+  "mail_list": ["кратко описание на казуса и желания резултат;", "засегнатите държави или компании;", "срокове, ако има такива;", "телефон за обратна връзка (по желание)."],
+  "mail_btn": "Пишете ни на имейл", "mail_subj": "Запитване за консултация",
+  "mail_body": "Здравейте,\n\nБих искал/а консултация по следния въпрос:\n\n\nИме:\nКомпания:\nТелефон:\n",
+  "mail_note": "Бутонът отваря вашата пощенска програма. Данните, които ни изпращате, се обработват съгласно",
+  "copy": "Копирай адреса", "copied": "Адресът е копиран",
   "map": "Вижте на картата"},
  "en": {"title": "Contact — Request a Consultation | SM Legal, Sofia",
   "desc": "Contact SM Legal law firm in Sofia, Bulgaria — 41 Dobrotitsa Despot Str. Request a consultation on corporate, employment, immigration law and more.",
   "h1": "Contact", "sub": "Briefly describe your question and we will get back to you within one business day.",
-  "form_h": "Consultation request", "name": "Full name", "email": "Email", "phone": "Phone", "company": "Company",
-  "topic": "Practice area", "topic_any": "Select (optional)", "msg": "Message",
-  "consent": "I agree that the data provided will be processed for the purpose of responding to my enquiry in accordance with the", "send": "Send",
-  "ok": "Thank you! Your message has been sent successfully. We will be in touch soon.", "err": "Something went wrong. Please email us at office@smlegal.bg.",
+  "form_h": "Consultation request",
+  "mail_p": "Send us a short description of your question and we will reply within one business day. To help us assess it quickly, please include:",
+  "mail_list": ["a brief summary of the matter and the outcome you seek;", "the countries or companies involved;", "any deadlines;", "a phone number for a call back (optional)."],
+  "mail_btn": "Email us", "mail_subj": "Consultation request",
+  "mail_body": "Hello,\n\nI would like a consultation on the following matter:\n\n\nName:\nCompany:\nPhone:\n",
+  "mail_note": "The button opens your email app. Any data you send us is processed in accordance with the",
+  "copy": "Copy address", "copied": "Address copied",
   "map": "View on map"},
 }
 def build_contact(lang):
@@ -717,7 +753,8 @@ def build_contact(lang):
     hero, bc = page_hero(lang, path, [(a["h1"], path)], a["h1"], a["sub"])
     out = head(lang, path, a["title"], a["desc"], alt, schema=[bc, {"@type": "ContactPage", "url": url(path), "about": {"@id": ORG_ID}}])
     out += header(lang, path, "contact", alt) + hero
-    opts = "".join(f'<option>{esc(p[lang]["title"])}</option>' for p in PRACTICES)
+    from urllib.parse import quote
+    mailto = f"mailto:{EMAIL}?subject={quote(a['mail_subj'])}&amp;body={quote(a['mail_body'])}"
     maps = "https://www.google.com/maps/search/?api=1&query=" + "Dobrotitsa+Despot+41,+Sofia+1612"
     out += f"""<section class="section"><div class="wrap contact-grid">
 <div class="reveal">
@@ -728,20 +765,17 @@ def build_contact(lang):
   <li>{icon('chat')}<div><strong>{t['langs_l']}</strong>{t['langs']}</div></li>
  </ul>
 </div>
-<form class="form reveal" action="{rel(path, 'contact.php')}" method="post">
+<div class="form mail-panel reveal">
  <h2 style="font-size:2rem">{a['form_h']}</h2>
- <p class="form-note" data-form-status data-ok="{esc(a['ok'])}" data-err="{esc(a['err'])}" hidden role="status"></p>
- <input type="hidden" name="lang" value="{lang}">
- <div class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
- <div class="row"><div class="field"><label for="f-name">{a['name']} *</label><input id="f-name" name="name" required autocomplete="name"></div>
- <div class="field"><label for="f-company">{a['company']}</label><input id="f-company" name="company" autocomplete="organization"></div></div>
- <div class="row"><div class="field"><label for="f-email">{a['email']} *</label><input id="f-email" type="email" name="email" required autocomplete="email"></div>
- <div class="field"><label for="f-phone">{a['phone']}</label><input id="f-phone" type="tel" name="phone" autocomplete="tel"></div></div>
- <div class="field"><label for="f-topic">{a['topic']}</label><select id="f-topic" name="topic"><option value="">{a['topic_any']}</option>{opts}</select></div>
- <div class="field"><label for="f-msg">{a['msg']} *</label><textarea id="f-msg" name="message" required></textarea></div>
- <label class="check"><input type="checkbox" name="consent" value="1" required><span>{a['consent']} <a href="{rel(path, ROUTES['privacy'][lang])}">{t['privacy'].lower()}</a>.</span></label>
- <button class="btn" type="submit">{a['send']}</button>
-</form>
+ <p>{a['mail_p']}</p>
+ <ul class="mail-list">{''.join(f'<li>{esc(i)}</li>' for i in a['mail_list'])}</ul>
+ <div class="mail-actions">
+  <a class="btn" href="{mailto}">{icon('mail')}<span>{a['mail_btn']}</span></a>
+  <button type="button" class="btn btn--ghost" data-copy="{EMAIL}" data-copied="{esc(a['copied'])}">{a['copy']}</button>
+ </div>
+ <p class="mail-addr"><a href="mailto:{EMAIL}">{EMAIL}</a></p>
+ <p class="form-note-s">{a['mail_note']} <a href="{rel(path, ROUTES['privacy'][lang])}">{t['privacy'].lower()}</a>.</p>
+</div>
 </div></section>"""
     out += footer(lang, path)
     emit(path, out, lang, alt)
@@ -750,26 +784,26 @@ def build_contact(lang):
 PRIV = {
  "bg": {"title": "Политика за поверителност | SM Legal", "h1": "Политика за поверителност",
   "desc": "Политика за поверителност на SM Legal — как обработваме личните данни, предоставени чрез уебсайта smlegal.bg.",
-  "body": """<p>Настоящата политика описва как SM Legal — Адвокатска кантора Марушкина („ние“) обработва личните данни на посетителите на уебсайта smlegal.bg и на лицата, които се свързват с нас.</p>
-<h2>Администратор на данните</h2><p>Адвокат Силвия Марушкина, адрес: гр. София 1612, ул. „Добротица Деспот“ 41, имейл: office@smlegal.bg.</p>
-<h2>Какви данни обработваме</h2><p>Обработваме данните, които ни предоставяте чрез формата за контакт или по имейл — име, имейл адрес, телефон, наименование на компанията и съдържанието на съобщението ви.</p>
-<h2>Цели и правно основание</h2><ul><li>отговор на вашето запитване и предприемане на стъпки преди сключване на договор за правна помощ — чл. 6, пар. 1, б. „б“ от Регламент (ЕС) 2016/679 (GDPR);</li><li>изпълнение на законови задължения, включително по Закона за адвокатурата и Закона за мерките срещу изпирането на пари — чл. 6, пар. 1, б. „в“ от GDPR;</li><li>съгласие, предоставено чрез формата за контакт — чл. 6, пар. 1, б. „а“ от GDPR.</li></ul>
-<h2>Срок на съхранение</h2><p>Данните от запитвания, които не са довели до ангажиране, се съхраняват до 12 месеца. Данните на клиенти се съхраняват за сроковете, предвидени в приложимото законодателство.</p>
-<h2>Получатели</h2><p>Не предоставяме данните ви на трети лица, освен на доставчици на хостинг и имейл услуги, които действат по наше възлагане, или когато това се изисква по закон. Адвокатската тайна се спазва по всяко време.</p>
-<h2>Бисквитки</h2><p>Уебсайтът не използва рекламни или аналитични бисквитки. Шрифтовете се зареждат от услугата Google Fonts.</p>
-<h2>Вашите права</h2><p>Имате право на достъп, коригиране, изтриване, ограничаване на обработването, преносимост и възражение, както и право да оттеглите съгласието си по всяко време. Можете да упражните правата си, като ни пишете на office@smlegal.bg. Имате право да подадете жалба до Комисията за защита на личните данни (www.cpdp.bg).</p>
-<p><em>Последна актуализация: октомври 2026 г.</em></p>"""},
+  "body": """<p>Настоящата политика описва начина, по който SM Legal — Адвокатска кантора Марушкина („ние“), обработва личните данни на посетителите на уебсайта smlegal.bg и на лицата, които се свързват с нас.</p>
+<h2>Администратор на данните</h2><p>Адвокат Силвия Марушкина, адрес: гр. София 1612, ул. „Добротица Деспот“ № 41, електронна поща: office@smlegal.bg.</p>
+<h2>Какви данни обработваме</h2><p>Обработваме данните, които ни предоставяте по електронна поща или по телефон — име, адрес на електронна поща, телефон, наименование на дружеството и съдържанието на съобщението. Уебсайтът не съдържа форми за въвеждане на лични данни.</p><p>При посещение на уебсайта хостинг доставчикът автоматично обработва техническа информация (IP адрес, вид на браузъра, дата и час на заявката), необходима за предоставянето и сигурността на уебсайта.</p>
+<h2>Цели и правно основание</h2><ul><li>отговор на вашето запитване и предприемане на стъпки преди сключването на договор за правна защита и съдействие — чл. 6, пар. 1, буква „б“ от Регламент (ЕС) 2016/679 (GDPR);</li><li>изпълнение на законови задължения, включително по Закона за адвокатурата и Закона за мерките срещу изпирането на пари — чл. 6, пар. 1, буква „в“ от GDPR;</li><li>законен интерес от сигурното и надеждно функциониране на уебсайта — чл. 6, пар. 1, буква „е“ от GDPR;</li><li>съгласие — по отношение на аналитичните бисквитки, ако бъдат използвани — чл. 6, пар. 1, буква „а“ от GDPR.</li></ul>
+<h2>Срок на съхранение</h2><p>Данните от запитвания, които не са довели до сключване на договор, се съхраняват за срок до 12 месеца. Данните на клиентите се съхраняват в сроковете, предвидени в приложимото законодателство.</p>
+<h2>Получатели</h2><p>Не предоставяме личните ви данни на трети лица, освен на доставчици на хостинг и имейл услуги, които действат като обработващи лични данни по наше възлагане, или когато това се изисква по закон. Уебсайтът се хоства от GitHub Pages (GitHub, Inc., САЩ); предаването на данни към САЩ се основава на Рамката за защита на данните между ЕС и САЩ и/или на стандартни договорни клаузи. Адвокатската тайна се спазва при всички обстоятелства.</p>
+<h2 id="cookies">Бисквитки</h2><p>Бисквитките са малки текстови файлове, които се съхраняват в браузъра ви. Уебсайтът не използва рекламни бисквитки. Шрифтовете се зареждат директно от нашия уебсайт, без заявки към външни услуги.</p><ul><li><strong>Необходими</strong> — запис в браузъра ви (localStorage, ключ „sm_cookie_consent“), който съхранява избора ви относно бисквитките за срок до 12 месеца. Не изисква съгласие.</li><li><strong>Аналитични</strong> — Google Analytics (Google Ireland Ltd.), за анонимизирана статистика на посещенията. Зареждат се единствено ако изрично ги приемете; срок на съхранение до 14 месеца.</li></ul><p>Можете да промените или оттеглите съгласието си по всяко време чрез връзката „Настройки за бисквитки“ в долната част на всяка страница или като изтриете бисквитките чрез настройките на браузъра си.</p>
+<h2>Вашите права</h2><p>Имате право на достъп до личните си данни, на тяхното коригиране и изтриване, на ограничаване на обработването, на преносимост и на възражение, както и право да оттеглите съгласието си по всяко време, без това да засяга законосъобразността на обработването преди оттеглянето. Можете да упражните правата си, като ни пишете на office@smlegal.bg. Имате право да подадете жалба до Комисията за защита на личните данни (www.cpdp.bg).</p>
+<p><em>Последна актуализация: ноември 2026 г.</em></p>"""},
  "en": {"title": "Privacy Policy | SM Legal", "h1": "Privacy Policy",
   "desc": "SM Legal privacy policy — how we process personal data submitted through the smlegal.bg website.",
   "body": """<p>This policy explains how SM Legal — Marushkina Law Firm ("we") processes the personal data of visitors to smlegal.bg and of persons who contact us.</p>
 <h2>Data controller</h2><p>Attorney-at-law Sylvia Marushkina, 41 Dobrotitsa Despot Str., Sofia 1612, Bulgaria, email: office@smlegal.bg.</p>
-<h2>Data we process</h2><p>We process the data you provide via the contact form or by email — name, email address, phone number, company name and the content of your message.</p>
-<h2>Purposes and legal basis</h2><ul><li>responding to your enquiry and taking steps prior to entering into an engagement — Art. 6(1)(b) of Regulation (EU) 2016/679 (GDPR);</li><li>compliance with legal obligations, including under the Bar Act and anti-money laundering legislation — Art. 6(1)(c) GDPR;</li><li>consent given through the contact form — Art. 6(1)(a) GDPR.</li></ul>
+<h2>Data we process</h2><p>We process the data you provide by email or by phone — name, email address, phone number, company name and the content of your message. The website contains no forms for entering personal data.</p><p>When you visit the website, the hosting provider automatically processes technical information (IP address, browser type, date and time of the request) needed to deliver and secure the site.</p>
+<h2>Purposes and legal basis</h2><ul><li>responding to your enquiry and taking steps prior to entering into an engagement — Art. 6(1)(b) of Regulation (EU) 2016/679 (GDPR);</li><li>compliance with legal obligations, including under the Bar Act and anti-money laundering legislation — Art. 6(1)(c) GDPR;</li><li>our legitimate interest in the secure and reliable operation of the website — Art. 6(1)(f) GDPR;</li><li>consent — for analytics cookies, if enabled — Art. 6(1)(a) GDPR.</li></ul>
 <h2>Retention</h2><p>Data from enquiries that do not result in an engagement are kept for up to 12 months. Client data are kept for the periods required by applicable law.</p>
-<h2>Recipients</h2><p>We do not disclose your data to third parties, except to hosting and email service providers acting on our behalf, or where required by law. Attorney–client privilege is observed at all times.</p>
-<h2>Cookies</h2><p>This website does not use advertising or analytics cookies. Fonts are loaded from the Google Fonts service.</p>
+<h2>Recipients</h2><p>We do not disclose your data to third parties, except to hosting and email service providers acting on our behalf, or where required by law. The website is hosted by GitHub Pages (GitHub, Inc., USA); transfers to the USA rely on the EU–U.S. Data Privacy Framework and/or standard contractual clauses. Attorney–client privilege is observed at all times.</p>
+<h2 id="cookies">Cookies</h2><p>Cookies are small files stored in your browser. This website does not use advertising cookies. Fonts are served directly from our own site, with no requests to external services.</p><ul><li><strong>Necessary</strong> — a browser storage entry (localStorage, key “sm_cookie_consent”) that remembers your cookie choice for up to 12 months. No consent required.</li><li><strong>Analytics</strong> — Google Analytics (Google Ireland Ltd.), providing anonymised visit statistics. Loaded only if you expressly accept them; retention up to 14 months.</li></ul><p>You can change or withdraw your consent at any time via the “Cookie settings” link at the bottom of every page, or by deleting cookies in your browser settings.</p>
 <h2>Your rights</h2><p>You have the right of access, rectification, erasure, restriction of processing, data portability and objection, and the right to withdraw consent at any time. You may exercise your rights by writing to office@smlegal.bg. You also have the right to lodge a complaint with the Commission for Personal Data Protection (www.cpdp.bg).</p>
-<p><em>Last updated: October 2026</em></p>"""},
+<p><em>Last updated: November 2026</em></p>"""},
 }
 def build_privacy(lang):
     a = PRIV[lang]
@@ -796,7 +830,9 @@ def build_404():
 def write_all():
     if os.path.exists(OUT):
         shutil.rmtree(OUT)
-    shutil.copytree(os.path.join(os.path.dirname(os.path.abspath(__file__)), "static"), OUT)
+    os.makedirs(OUT)
+    # static assets live in the repository root (assets/)
+    shutil.copytree(os.path.join(ROOT, "assets"), os.path.join(OUT, "assets"))
     for lang in ("bg", "en"):
         build_home(lang); build_about(lang); build_practice_index(lang)
         build_insights_index(lang); build_contact(lang); build_privacy(lang)
@@ -823,8 +859,35 @@ def write_all():
         sm.append(' </url>')
     sm.append('</urlset>')
     open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8").write("\n".join(sm))
-    open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nDisallow: /contact.php\n\nSitemap: {SITE}/sitemap.xml\n")
+    open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
+    # GitHub Pages: custom domain + no Jekyll processing
+    open(os.path.join(OUT, "CNAME"), "w").write(SITE.split("//")[1] + "\n")
+    open(os.path.join(OUT, ".nojekyll"), "w").write("")
+    # former Team pages -> About (GitHub Pages has no server-side redirects)
+    for old, new in (("ekip.html", "za-nas.html#ekip"), ("en/team.html", "en/about.html#team")):
+        target = url(new)
+        os.makedirs(os.path.dirname(os.path.join(OUT, old)) or OUT, exist_ok=True)
+        open(os.path.join(OUT, old), "w", encoding="utf-8").write(
+            f'<!doctype html><html><head><meta charset="utf-8"><title>SM Legal</title>'
+            f'<meta name="robots" content="noindex"><link rel="canonical" href="{target}">'
+            f'<meta http-equiv="refresh" content="0; url={target}"></head>'
+            f'<body><a href="{target}">{target}</a></body></html>\n')
     print(len(PAGES), "pages")
 
+def publish():
+    """Copy the built site from dist/ to the repository root (served by GitHub Pages)."""
+    for name in os.listdir(OUT):
+        src, dst = os.path.join(OUT, name), os.path.join(ROOT, name)
+        if os.path.isdir(src):
+            if os.path.exists(dst): shutil.rmtree(dst)
+            shutil.copytree(src, dst)
+        else:
+            shutil.copy2(src, dst)
+    shutil.rmtree(OUT)
+    print("published to", ROOT)
+
 if __name__ == "__main__":
+    import sys
     write_all()
+    if "--publish" in sys.argv:
+        publish()
