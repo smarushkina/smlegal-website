@@ -47,17 +47,17 @@ T = {
   "nav": [("home","Начало"),("about","За нас"),("practice","Правни услуги"),("insights","Публикации"),("contact","Контакти")],
   "cta": "Заявете консултация", "more": "Научете повече", "read": "Прочетете", "all_practices": "Всички правни услуги",
   "all_posts": "Всички публикации", "news": "Новина", "article": "Статия", "min": "мин. четене",
-  "services": "Нашите услуги", "approach": "Нашият подход", "faq": "Често задавани въпроси", "other_areas": "Други правни услуги",
+  "services": "Обхват на правната помощ", "approach": "Нашият подход", "faq": "Често задавани въпроси", "other_areas": "Други практики",
   "related": "Свързани публикации", "new": "Ново", "address": "ул. „Добротица Деспот“ 41, София 1612",
   "address_l": "Адрес", "email_l": "Имейл", "hours_l": "Работно време", "hours": "Понеделник – петък, 9:30 – 18:00 ч.",
   "langs_l": "Езици на обслужване", "langs": "български, английски",
   "foot_about": "Ние посвещаваме времето, работата и усилията си, за да продължава вашият бизнес да расте.",
   "foot_practices": "Правни услуги", "foot_firm": "Кантората", "foot_visit": "Посетете ни",
   "rights": "Всички права запазени.", "privacy": "Политика за поверителност",
-  "disclaimer": "Публикацията има информационен характер и не представлява правна консултация. За съвет относно конкретен случай, моля, свържете се с нас.",
+  "disclaimer": "Настоящата публикация има информационен характер и не представлява правна консултация. За становище по конкретен случай, моля, свържете се с нас.",
   "home_l": "Начало", "skip": "Към съдържанието", "menu": "Меню", "back_top": "Към началото",
-  "cta_band_h": "Нуждаете се от правен съвет?",
-  "cta_band_p": "Свържете се с нас — ще отговорим в рамките на един работен ден.",
+  "cta_band_h": "Имате нужда от правна консултация?",
+  "cta_band_p": "Опишете накратко въпроса си — ще се свържем с вас в рамките на един работен ден.",
   "filter_all": "Всички", "filter_news": "Новини", "filter_articles": "Статии",
   "author": "Силвия Марушкина", "author_role": "Адвокат, основател на SM Legal",
   "ck_h": "Бисквитки", "ck_p": "Използваме само необходимите за работата на сайта технически средства. С ваше съгласие бихме използвали и аналитични бисквитки, за да подобряваме сайта.",
@@ -338,36 +338,36 @@ def emit(path, html_doc, lang=None, alt=None, lastmod=TODAY, sitemap=True):
 HOME = {
  "bg": {
   "title": "SM Legal — Адвокатска кантора Марушкина | Бизнес адвокат в София",
-  "desc": "SM Legal е адвокатска кантора в София за бизнеса: търговско и корпоративно право, венчър капитал, стартъпи, трудово и имиграционно право, данъци, compliance, GDPR, търговски марки и спорове.",
+  "desc": "SM Legal — адвокатска кантора в София с практика в бизнес правото: търговско и корпоративно право, рисков капитал, стартъпи, трудово и имиграционно право, данъци, корпоративно съответствие, защита на личните данни, търговски марки и спорове.",
   "eyebrow": "Адвокатска кантора · София",
-  "h1": "Правни решения, които <em>движат</em> бизнеса ви напред",
-  "lead": "Адвокатска кантора за бизнеса в София. Съветваме компании, основатели и инвеститори по търговско и корпоративно право, инвестиции, имиграция и регулаторно съответствие — на български и английски език.",
+  "h1": "Правна сигурност <em>на всеки етап</em> от развитието на вашия бизнес",
+  "lead": '<span class="brand-inline">SM Legal</span> предоставя правна помощ с внимание към всеки детайл и към конкретните цели на клиента. Всеки възложен казус получава задълбочен анализ, прецизно изготвени документи и лична ангажираност — от първата консултация до неговото приключване.',
   "motto_labels": ["Подход", "Доверие", "Философия"],
   "panel": ["Свържете се с нас", "Първата стъпка е кратък разговор, в който изясняваме въпроса ви и възможните решения."],
-  "quote": "Гордеем се, че с години упорит труд постигнахме отлични резултати, а клиентите ни остават с нас.",
-  "slogans": ["Тук сме, за да разберем нуждите на вашата компания и да ви предложим най-добрите възможни решения.",
-              "Гордеем се, че с години упорит труд постигнахме отлични резултати, а клиентите ни остават с нас.",
-              "Вярваме, че успехът е резултат от проактивно отношение, добра воля и постоянни усилия."],
+  "quote": "Доверието се изгражда с последователна и отговорна работа. Ценим дългосрочните отношения с клиентите си и се гордеем, че много от тях работят с нас от години.",
+  "slogans": ["Стремим се да познаваме в дълбочина дейността на всеки клиент, за да предложим решения, съобразени с неговите конкретни цели и интереси.",
+              "Доверието се изгражда с последователна и отговорна работа. Ценим дългосрочните отношения с клиентите си и се гордеем, че много от тях работят с нас от години.",
+              "Вярваме, че успехът е резултат от проактивност, добросъвестност и постоянство."],
   "stats": [("11", "области на бизнес правото"), ("2", "езика — български и английски"), ("1", "работен ден за отговор"), ("7", "партньорски компании")],
   "explore_more": "Към услугата",
   "statement": "Вярваме, че успехът е резултат от <strong>проактивно отношение</strong>, добра воля и постоянни усилия.",
   "about_eb": "За кантората",
-  "about_h": "Посвещаваме времето, работата и усилията си, за да расте вашият бизнес",
-  "about_p": ["SM Legal има за цел да подкрепя бизнеса ви изцяло и да предоставя широк спектър от отлични правни услуги, като разбира вашата дейност и цели. Подкрепяме ви в процеса на учредяване на компанията и на всеки етап от корпоративните промени и растежа.",
-              "Работим с български и международни клиенти — основатели, инвеститори, собственици на бизнес и мениджъри — на български и английски език."],
-  "values": [("Проактивност", "Предвиждаме рисковете и предлагаме решения, преди проблемът да възникне."),
-             ("Задълбоченост", "Всяко становище стъпва на внимателен анализ на фактите и на приложимото право."),
-             ("Бизнес perspective", "Мислим в търговски категории и търсим решения, които работят на практика."),
-             ("Прозрачност", "Ясни срокове, предвидими разходи и постоянна комуникация с клиента.")],
+  "about_h": "Посвещаваме времето, експертизата и усилията си на развитието на вашия бизнес",
+  "about_p": ["SM Legal предоставя цялостно правно обслужване на бизнеса, основано на задълбочено познаване на дейността и целите на всеки клиент. Съпровождаме клиентите си от учредяването на дружеството през всеки етап на корпоративни промени и растеж.",
+              "Работим с български и чуждестранни клиенти — основатели, инвеститори, собственици и управители на дружества."],
+  "values": [("Проактивност", "Предвиждаме правните рискове и предлагаме решения, преди проблемът да е възникнал."),
+             ("Задълбоченост", "Всяко становище се основава на внимателен анализ на фактите и на приложимото право."),
+             ("Бизнес perspective", "Мислим в търговски категории и търсим решения, които са приложими на практика."),
+             ("Прозрачност", "Ясни срокове, предвидимо възнаграждение и постоянна комуникация с клиента.")],
   "pr_eb": "Правни услуги", "pr_h": "Експертиза в единадесет области на бизнес правото",
   "pr_p": "Обединяваме корпоративна, регулаторна и процесуална експертиза, за да предложим на клиентите си цялостно правно обслужване.",
-  "steps_eb": "Как работим", "steps_h": "Ясен процес от първия разговор до резултата",
-  "steps": [("Консултация", "Изслушваме ви, изясняваме целите и обстоятелствата и очертаваме възможните варианти."),
-            ("Анализ", "Проучваме документите и приложимото право и идентифицираме рисковете."),
-            ("Решение", "Предлагаме конкретен план с ясни срокове и предварително договорено възнаграждение."),
-            ("Подкрепа", "Изпълняваме, представляваме ви и оставаме на разположение и след приключването.")],
+  "steps_eb": "Как работим", "steps_h": "Последователен процес — от първата консултация до приключването на възложената работа",
+  "steps": [("Консултация", "Изслушваме ви, изясняваме целите и фактическата обстановка и очертаваме възможните варианти."),
+            ("Анализ", "Проучваме документите и приложимото право и идентифицираме правните рискове."),
+            ("Решение", "Предлагаме конкретен план за действие с ясни срокове и предварително договорено възнаграждение."),
+            ("Подкрепа", "Изпълняваме възложената работа, представляваме ви пред трети лица и институции и оставаме на разположение и след приключването ѝ.")],
   "team_eb": "Екип", "team_p": "Специализира в търговското и корпоративното право, сделките с рисков капитал и интелектуалната собственост и има дългогодишен опит в работата с български и международни клиенти. Нейната мотивация за професионално развитие и желание да подкрепя клиентите в постигането на техните цели са довели до високо ниво на професионализъм, оценено положително от много клиенти.",
-  "q_eb": "Препоръки", "q_h": "Какво казват клиентите ни",
+  "q_eb": "Препоръки", "q_h": "Отзиви на клиенти",
   "ins_eb": "Публикации", "ins_h": "Статии и новини", "ins_p": "Анализи на законодателни промени и практически насоки за бизнеса.",
   "partners_h": "Партньори и клиенти",
  },
@@ -376,7 +376,7 @@ HOME = {
   "desc": "SM Legal is a business law firm in Sofia, Bulgaria: corporate and commercial law, venture capital, start-ups, employment and immigration, tax, compliance, GDPR, trade marks and disputes.",
   "eyebrow": "Law firm · Sofia, Bulgaria",
   "h1": "Legal solutions that keep your business <em>moving</em> forward",
-  "lead": "A business law firm in Sofia. We advise companies, founders and investors on corporate and commercial law, investment, immigration and regulatory compliance — in Bulgarian and English.",
+  "lead": '<span class="brand-inline">SM Legal</span> provides legal services with close attention to detail and to each client’s specific objectives. Every matter receives thorough analysis, precisely drafted documentation and personal commitment — from the first consultation to its conclusion.',
   "motto_labels": ["Approach", "Trust", "Philosophy"],
   "panel": ["Get in touch", "The first step is a short conversation in which we clarify your question and the possible solutions."],
   "quote": "We are proud that years of hard work have brought excellent results, and our clients are still with us.",
@@ -389,7 +389,7 @@ HOME = {
   "about_eb": "About the firm",
   "about_h": "We dedicate our time, work and efforts to keep your business growing",
   "about_p": ["SM Legal aims to support your business entirely and to provide a wide spectrum of excellent legal services by understanding your business activity and goals. We support you in the incorporation process and during each stage of corporate change and growth.",
-              "We work with Bulgarian and international clients — founders, investors, business owners and managers — in Bulgarian and English."],
+              "We work with Bulgarian and international clients — founders, investors, business owners and managers."],
   "values": [("Proactive", "We anticipate risks and propose solutions before problems arise."),
              ("Thorough", "Every opinion rests on careful analysis of the facts and the applicable law."),
              ("Business-minded", "We think in commercial terms and look for solutions that work in practice."),
@@ -414,21 +414,9 @@ def build_home(lang):
     path = ROUTES["home"][lang]; alt = ROUTES["home"]["en" if lang == "bg" else "bg"]
     out = head(lang, path, h["title"], h["desc"], alt, schema=[{"@type": "WebSite", "@id": SITE + "/#website", "url": SITE + "/", "name": "SM Legal", "inLanguage": ["bg", "en"], "publisher": {"@id": ORG_ID}}])
     out += header(lang, path, "home", alt)
-    out += f"""<section class="hero"><div class="wrap hero__grid">
+    out += f"""<section class="hero"><div class="wrap hero__grid hero__grid--solo">
  <div class="hero__copy reveal"><span class="eyebrow">{h['eyebrow']}</span><h1>{h['h1']}</h1><p class="lead">{h['lead']}</p>
  <div class="hero__cta"><a class="btn" href="{rel(path, ROUTES['contact'][lang])}">{t['cta']}</a><a class="btn btn--ghost" href="{rel(path, ROUTES['practice'][lang])}">{t['all_practices']}</a></div></div>
- <aside class="hero__panel" aria-label="{h['panel'][0]}">
-  <img class="hero__logo" src="{rel(path, 'assets/img/brand/logo-rose.svg')}" alt="" width="551" height="220">
-  <div class="hero__contact">
-   <p class="hero__contact-h">{h['panel'][0]}</p>
-   <p class="hero__contact-p">{h['panel'][1]}</p>
-   <ul>
-    <li>{icon('pin')}<span>{t['address']}</span></li>
-    <li>{icon('mail')}<a href="mailto:{EMAIL}">{EMAIL}</a></li>
-    <li>{icon('clock')}<span>{t['hours']}</span></li>
-   </ul>
-  </div>
- </aside>
 </div></section>
 <section class="mottos"><div class="wrap mottos__grid">{''.join(f'<figure class="motto reveal{" motto--dark" if i==1 else ""}"><figcaption>{esc(lbl)}</figcaption><blockquote>{esc(x)}</blockquote></figure>' for i,(lbl,x) in enumerate(zip(h['motto_labels'], h['slogans'])))}</div></section>
 <section class="section"><div class="wrap grid-2">
@@ -469,10 +457,10 @@ def testimonial(q, lang):
     return f'<blockquote class="quote reveal"><p>{T[lang]['qo']}{esc(q[lang])}{T[lang]['qc']}</p><footer><strong>{esc(name)}</strong>{esc(role)}</footer></blockquote>'
 
 CLIENTS = {
- "bg": {"eb": "Нашите клиенти", "h": "Български и международни компании на всеки етап от развитието си",
-        "items": [("Стартъпи", "Основатели и млади екипи — от учредяването до първите инвестиции."),
-                  ("Scale-up компании", "Бързо растящи бизнеси, които навлизат на нови пазари и привличат капитал."),
-                  ("Утвърдени компании", "Развити дружества с текущи корпоративни, трудови и регулаторни нужди.")]},
+ "bg": {"eb": "Нашите клиенти", "h": "Български и международни дружества на всеки етап от тяхното развитие",
+        "items": [("Стартъпи", "Основатели и млади екипи — от учредяването до привличането на първите инвестиции."),
+                  ("Растящи компании (scale-up)", "Динамично развиващи се дружества, които навлизат на нови пазари и привличат капитал."),
+                  ("Утвърдени компании", "Утвърдени дружества с текущи корпоративни, трудовоправни и регулаторни нужди.")]},
  "en": {"eb": "Our clients", "h": "Bulgarian and international companies at every stage of growth",
         "items": [("Start-ups", "Founders and young teams — from incorporation to the first investment rounds."),
                   ("Scale-ups", "Fast-growing businesses entering new markets and raising capital."),
@@ -490,26 +478,20 @@ def partners(lang, path):
 # ---- about
 ABOUT = {
  "bg": {"title": "За нас | SM Legal — Адвокатска кантора Марушкина",
-  "desc": "Запознайте се с SM Legal — адвокатска кантора в София, фокусирана върху бизнес правото. Нашата мисия, ценности и начин на работа с български и международни клиенти.",
-  "h1": "За SM Legal", "sub": "Адвокатска кантора, създадена да подкрепя бизнеса на всеки етап от неговото развитие.",
+  "desc": "Запознайте се с SM Legal — адвокатска кантора в София с практика в бизнес правото: мисия, ценности и начин на работа с български и международни клиенти.",
+  "h1": "За SM Legal", "sub": "Адвокатска кантора с практика в бизнес правото, която съпровожда своите клиенти на всеки етап от тяхното развитие.",
   "blocks": [
-   ("Нашата мисия", ["SM Legal има за цел да подкрепя бизнеса ви изцяло и да предоставя широк спектър от отлични правни услуги, като разбира вашата дейност и цели. Подкрепяме ви в процеса на учредяване на компанията и на всеки етап от корпоративните промени и растежа.",
-                     "Вярваме, че добрият адвокат не е само защитник при спор, а доверен съветник, който помага спорът изобщо да не възникне. Затова се стремим да познаваме бизнеса на клиентите си в дълбочина — техните продукти, пазари, партньори и планове."]),
-   ("Кои са нашите клиенти", ["Работим с основатели на стартиращи и технологични компании, инвеститори и фондове за рисков капитал, малки и средни предприятия, чуждестранни компании, които навлизат на българския пазар, както и с физически лица — предприемачи, мениджъри и висококвалифицирани специалисти, които се установяват в България.",
-                               "Обслужваме клиенти от България, държавите от Европейския съюз, Обединеното кралство, САЩ, Обединените арабски емирства и други юрисдикции, като при необходимост координираме работата с доверени партньори в чужбина."]),
-   ("Как работим", ["Всяко ангажиране започва с ясно определяне на задачата, сроковете и възнаграждението. Предлагаме почасово възнаграждение, фиксирана цена за определени услуги и абонаментно правно обслужване за клиенти с постоянни нужди.",
-                    "Отговаряме бързо, пишем ясно и обясняваме правните въпроси на разбираем език. Поверителността на информацията и защитата на интересите на клиента са в основата на нашата работа."])],
+   ("Нашата мисия", ["SM Legal предоставя цялостно правно обслужване на бизнеса, основано на задълбочено познаване на дейността и целите на всеки клиент. Съпровождаме клиентите си от учредяването на дружеството през всеки етап на корпоративни промени и растеж."]),
+   ("Кои са нашите клиенти", ["Работим с основатели на стартиращи и технологични компании, инвеститори и фондове за рисков капитал, малки и средни предприятия, чуждестранни дружества, които навлизат на българския пазар, както и с физически лица — предприемачи, управители и висококвалифицирани специалисти, които се установяват в България."]),
+   ("Как работим", ["Всяко ангажиране започва с ясно определяне на предмета на възложената работа, сроковете и възнаграждението. Предлагаме почасово възнаграждение, фиксирано възнаграждение за определени услуги и абонаментно правно обслужване за клиенти с постоянни нужди."])],
   "facts": [("11", "области на бизнес правото"), ("2", "езика на обслужване — BG / EN"), ("1", "работен ден — срок за отговор"), ("100%", "фокус върху бизнеса")]},
  "en": {"title": "About Us | SM Legal — Marushkina Law Firm",
   "desc": "Meet SM Legal — a Sofia law firm focused on business law. Our mission, values and way of working with Bulgarian and international clients.",
   "h1": "About SM Legal", "sub": "A law firm built to support businesses at every stage of their development.",
   "blocks": [
-   ("Our mission", ["SM Legal aims to support your business entirely and to provide a wide spectrum of excellent legal services by understanding your business activity and goals. We support you in the incorporation process and during each stage of corporate change and growth.",
-                    "We believe that a good lawyer is not only an advocate in a dispute but a trusted adviser who helps prevent the dispute from arising in the first place. That is why we aim to know our clients' businesses in depth — their products, markets, partners and plans."]),
-   ("Who our clients are", ["We work with founders of start-ups and technology companies, investors and venture capital funds, small and medium-sized enterprises, foreign companies entering the Bulgarian market, and individuals — entrepreneurs, managers and highly qualified professionals relocating to Bulgaria.",
-                            "We serve clients from Bulgaria, the European Union, the United Kingdom, the United States, the United Arab Emirates and other jurisdictions, coordinating with trusted partners abroad where needed."]),
-   ("How we work", ["Every engagement starts with a clear definition of the task, timeline and fees. We offer hourly rates, fixed fees for defined services and retainer arrangements for clients with ongoing needs.",
-                    "We respond quickly, write clearly and explain legal issues in plain language. Confidentiality and the protection of our clients' interests are at the heart of what we do."])],
+   ("Our mission", ["SM Legal aims to support your business entirely and to provide a wide spectrum of excellent legal services by understanding your business activity and goals. We support you in the incorporation process and during each stage of corporate change and growth."]),
+   ("Who our clients are", ["We work with founders of start-ups and technology companies, investors and venture capital funds, small and medium-sized enterprises, foreign companies entering the Bulgarian market, and individuals — entrepreneurs, managers and highly qualified professionals relocating to Bulgaria."]),
+   ("How we work", ["Every engagement starts with a clear definition of the task, timeline and fees. We offer hourly rates, fixed fees for defined services and retainer arrangements for clients with ongoing needs."])],
   "facts": [("11", "areas of business law"), ("2", "working languages — BG / EN"), ("1", "business day response time"), ("100%", "business focus")]},
 }
 def build_about(lang):
@@ -522,10 +504,6 @@ def build_about(lang):
     out += '<div class="about-cols">' + "".join(f'<article class="about-col reveal"><h2>{esc(hh)}</h2>{"".join("<p>"+esc(p)+"</p>" for p in ps)}</article>' for hh, ps in a["blocks"]) + '</div>'
     out += '</div></section>'
     out += team_block(lang, path)
-    out += '<section class="stats stats--slate"><div class="wrap stats__grid">' + "".join(
-        f'<div class="stat reveal"><span class="stat__n" data-count="{n}">{n}</span><span class="stat__l">{esc(l)}</span></div>' for n, l in a["facts"]) + '</div></section>'
-    out += f'<section class="section section--white"><div class="wrap"><div class="sec-head"><span class="eyebrow">{"Ценности" if lang == "bg" else "Values"}</span><h2>{"Принципите, на които стъпваме" if lang == "bg" else "The principles we work by"}</h2></div><div class="values" style="grid-template-columns:repeat(2,1fr)">' + "".join(
-        f'<div class="value"><h3>{esc(x)}</h3><p>{esc(y)}</p></div>' for x, y in h["values"]) + '</div></div></section>'
     out += f'<section class="section section--sand"><div class="wrap"><div class="sec-head sec-head--center"><span class="eyebrow">{h["q_eb"]}</span><h2>{h["q_h"]}</h2></div>{slider(lang)}</div></section>'
     out += clients_band(lang)
     out += cta_band(lang, path) + footer(lang, path)
@@ -534,8 +512,8 @@ def build_about(lang):
 # ---- practice index & pages
 PR_INDEX = {
  "bg": {"title": "Правни услуги за бизнеса | SM Legal — адвокат в София",
-        "desc": "Правни услуги на SM Legal: търговско и корпоративно право, венчър капитал, стартъпи и IT, трудово и имиграционно право, данъци и ДДС, compliance и AML, GDPR, интелектуална собственост, имоти и спорове.",
-        "h1": "Правни услуги", "sub": "Цялостно правно обслужване на бизнеса — от учредяването и инвестициите до регулаторното съответствие и защитата при спорове."},
+        "desc": "Правни услуги на SM Legal: търговско и корпоративно право, рисков капитал, стартъпи и ИТ, трудово и имиграционно право, данъци и ДДС, корпоративно съответствие и AML, защита на личните данни, интелектуална собственост, недвижими имоти и спорове.",
+        "h1": "Правни услуги", "sub": "Цялостно правно обслужване на бизнеса — от учредяването на дружеството и привличането на инвестиции до регулаторното съответствие и защитата на интересите на клиента при спорове."},
  "en": {"title": "Practice Areas | SM Legal — Business Lawyer in Sofia",
         "desc": "SM Legal practice areas: corporate and commercial law, venture capital, start-ups and technology, employment, immigration, tax and VAT, compliance and AML, GDPR, IP, real estate and disputes.",
         "h1": "Practice Areas", "sub": "Comprehensive legal support for businesses — from incorporation and investment to regulatory compliance and dispute resolution."},
@@ -546,7 +524,7 @@ AUDIENCES = {
  "foreign":   {"bg": "Чуждестранни клиенти", "en": "Foreign clients", "keys": ["immigration", "corporate", "tax", "realestate", "employment", "compliance"]},
 }
 PX = {
- "bg": {"for": "За кого", "all": "Всички области", "services": "Какво включва", "faq": "Често задаван въпрос", "related": "Прочетете още", "more": "Цялата информация за услугата", "of": "от", "prev": "Предишна област", "next": "Следваща област", "pick": "Изберете област"},
+ "bg": {"for": "За кого", "all": "Всички области", "services": "Обхват на правната помощ", "faq": "Често задаван въпрос", "related": "Свързана публикация", "more": "Подробно за практиката", "of": "от", "prev": "Предишна област", "next": "Следваща област", "pick": "Изберете област"},
  "en": {"for": "Who it is for", "all": "All areas", "services": "What it covers", "faq": "Frequently asked", "related": "Further reading", "more": "Full practice area details", "of": "of", "prev": "Previous area", "next": "Next area", "pick": "Choose an area"},
 }
 def practice_hub(lang, path):
@@ -635,16 +613,16 @@ TEAM = {
  "bg": {"title": "Екип — адв. Силвия Марушкина | SM Legal",
   "desc": "Адвокат Силвия Марушкина — търговско и корпоративно право, венчър капитал, интелектуална собственост, имиграционно и трудово право. Основател на SM Legal, София.",
   "h1": "Екип", "sub": "Зад всяко решение стои личен ангажимент към успеха на клиента.",
-  "bio": ["Силвия Марушкина специализира в търговското и корпоративното право, сделките с рисков капитал и интелектуалната собственост и има дългогодишен опит в работата с български и международни клиенти.",
-          "Нейната практика обхваща учредяването и корпоративното обслужване на дружества, структурирането на инвестиционни сделки, регистрацията и защитата на търговски марки в България, ЕС и по Мадридската система, както и имиграционни и трудовоправни въпроси на компании, които привличат специалисти от чужбина.",
-          "Работи свободно на български и английски език и изготвя правни документи и на двата езика. Мотивацията ѝ за професионално развитие и желанието да подкрепя клиентите в постигането на целите им са довели до високо ниво на професионализъм, оценено положително от много клиенти."],
+  "bio": ["Адв. Силвия Марушкина има практика в областта на търговското и корпоративното право, сделките с рисков капитал и интелектуалната собственост и дългогодишен опит в работата с български и международни клиенти.",
+          "Практиката ѝ обхваща учредяването и корпоративното обслужване на дружества, структурирането на инвестиционни сделки, регистрацията и защитата на търговски марки в България, в Европейския съюз и по Мадридската система, както и имиграционните и трудовоправните въпроси на компании, които привличат специалисти от чужбина.",
+          "Към всеки възложен казус подхожда с прецизност, отговорност и лична ангажираност към интересите на клиента."],
   "focus": "Основни области", "langs_h": "Езици"},
  "en": {"title": "Team — Sylvia Marushkina, Attorney-at-law | SM Legal",
   "desc": "Sylvia Marushkina, attorney-at-law — corporate and commercial law, venture capital, intellectual property, immigration and employment law. Founder of SM Legal, Sofia.",
   "h1": "Team", "sub": "Behind every solution stands a personal commitment to the client's success.",
   "bio": ["Sylvia Marushkina specialises in commercial and corporate law, venture capital transactions and intellectual property, and has long-standing experience working with Bulgarian and international clients.",
           "Her practice covers company formation and corporate housekeeping, structuring investment transactions, registering and protecting trade marks in Bulgaria, the EU and under the Madrid System, as well as immigration and employment matters for companies hiring talent from abroad.",
-          "She works fluently in Bulgarian and English and drafts legal documents in both languages. Her motivation for professional growth and eagerness to help clients achieve their goals have led to a high level of professionalism, positively assessed by many clients."],
+          "Her motivation for professional growth and eagerness to help clients achieve their goals have led to a high level of professionalism, positively assessed by many clients."],
   "focus": "Key areas", "langs_h": "Languages"},
 }
 def person_schema(lang, path):
@@ -662,15 +640,14 @@ def team_block(lang, path):
  <div class="reveal"><span class="eyebrow">{a['h1']}</span><p class="role">{t['author_role']}</p><h2>{t['author']}</h2>
  {''.join('<p>'+esc(x)+'</p>' for x in a['bio'])}
  <h3 style="margin-top:30px">{a['focus']}</h3><ul class="tags">{tags}</ul>
- <p><strong>{a['langs_h']}:</strong> {t['langs']}</p>
  <div class="hero__cta"><a class="btn" href="{rel(path, ROUTES['contact'][lang])}">{t['cta']}</a><a class="btn btn--ghost" href="mailto:{EMAIL}">{EMAIL}</a></div></div>
 </div></section>"""
 
 # ---- insights
 INS = {
  "bg": {"title": "Публикации — статии и новини | SM Legal",
-        "desc": "Правни статии и новини от SM Legal: промени в законодателството, практически насоки за търговско право, венчър капитал, имиграция, compliance и интелектуална собственост.",
-        "h1": "Публикации", "sub": "Статии, анализи и новини за законодателни промени, които засягат вашия бизнес."},
+        "desc": "Правни анализи и новини от SM Legal: законодателни промени и практически насоки в областта на търговското право, рисковия капитал, имиграцията, корпоративното съответствие и интелектуалната собственост.",
+        "h1": "Публикации", "sub": "Анализи, практически насоки и новини за законодателни промени, които засягат вашия бизнес."},
  "en": {"title": "Insights — Articles and News | SM Legal",
         "desc": "Legal articles and news from SM Legal: legislative updates and practical guidance on Bulgarian corporate law, venture capital, immigration, compliance and intellectual property.",
         "h1": "Insights", "sub": "Articles, analysis and news on legislative changes that affect your business."},
@@ -725,8 +702,8 @@ def build_post(x, lang):
 # ---- contact
 CONTACT = {
  "bg": {"title": "Контакти — заявете консултация | SM Legal, София",
-  "desc": "Свържете се с адвокатска кантора SM Legal в София — ул. „Добротица Деспот“ 41. Заявете консултация по търговско, трудово, имиграционно право и други.",
-  "h1": "Контакти", "sub": "Опишете накратко вашия въпрос и ще се свържем с вас в рамките на един работен ден.",
+  "desc": "Свържете се с адвокатска кантора SM Legal в София, ул. „Добротица Деспот“ 41. Заявете консултация по търговско и корпоративно, трудово, имиграционно право и други области на бизнес правото.",
+  "h1": "Контакти", "sub": "Опишете накратко въпроса си и ще се свържем с вас в рамките на един работен ден. Всяка предоставена ни информация се ползва със закрилата на адвокатската тайна.",
   "form_h": "Заявка за консултация",
   "mail_p": "Изпратете ни кратко описание на въпроса си — ще получите отговор в рамките на един работен ден. За по-бърза оценка посочете:",
   "mail_list": ["кратко описание на казуса и желания резултат;", "засегнатите държави или компании;", "срокове, ако има такива;", "телефон за обратна връзка (по желание)."],
@@ -762,7 +739,6 @@ def build_contact(lang):
   <li>{icon('pin')}<div><strong>{t['address_l']}</strong>{t['address']}<br><a class="link-arrow" href="{maps}" target="_blank" rel="noopener">{a['map']}</a></div></li>
   <li>{icon('mail')}<div><strong>{t['email_l']}</strong><a href="mailto:{EMAIL}">{EMAIL}</a></div></li>
   <li>{icon('clock')}<div><strong>{t['hours_l']}</strong>{t['hours']}</div></li>
-  <li>{icon('chat')}<div><strong>{t['langs_l']}</strong>{t['langs']}</div></li>
  </ul>
 </div>
 <div class="form mail-panel reveal">
@@ -820,7 +796,7 @@ def build_404():
     out = head("bg", path, "Страницата не е намерена | SM Legal", "Страницата не е намерена.", None, noindex=True)
     out += header("bg", path, "", None)
     out += f"""<section class="page-hero dark" style="padding:120px 0"><div class="wrap"><span class="eyebrow">404</span>
-<h1>Страницата не е намерена</h1><p>Page not found. The page you are looking for may have been moved.</p>
+<h1>Страницата не е намерена</h1><p>Страницата, която търсите, е преместена или не съществува. / The page you are looking for may have been moved or no longer exists.</p>
 <div class="hero__cta" style="margin-top:30px"><a class="btn" href="/">Начало</a><a class="btn btn--ghost" href="/en/">Home (EN)</a></div></div></section>"""
     out += footer("bg", path)
     out = out.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<base href="/">', 1)
