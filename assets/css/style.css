@@ -721,3 +721,10 @@ body{font-size:14.5px;line-height:1.7}
 .site-header .wrap,.site-header.is-scrolled .wrap{height:80px;transition:none}
 .site-header .logo img,.site-header.is-scrolled .logo img{height:54px;transition:none}
 @media (max-width:1080px){.site-header .wrap,.site-header.is-scrolled .wrap{height:72px}.site-header .logo img,.site-header.is-scrolled .logo img{height:46px}}
+
+/* home: "When to contact us" list */
+.when h3{font-size:1.35rem;margin:0 0 18px}
+.when-list{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.when-list li{position:relative;padding:14px 0 14px 34px;border-top:1px solid var(--line);font-size:.95rem;line-height:1.6}
+.when-list li:last-child{border-bottom:1px solid var(--line)}
+.when-list li::before{content:"";position:absolute;left:4px;top:22px;width:14px;height:1px;background:var(--rose-d)}
