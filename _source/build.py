@@ -680,7 +680,6 @@ def build_about_v2(lang):
 </div></section>"""
     out += team_block(lang, path)
     out += f'<section class="section section--sand"><div class="wrap"><div class="sec-head sec-head--center"><span class="eyebrow">{h["q_eb"]}</span><h2>{h["q_h"]}</h2></div>{slider(lang)}</div></section>'
-    out += f'<section class="section"><div class="wrap"><div class="sec-head"><span class="eyebrow">{v["ins_eb"]}</span><h2>{v["ins_h"]}</h2></div><div class="posts">{"".join(post_card(y, lang, path) for y in sorted_posts()[:3])}</div></div></section>'
     out += cta_band(lang, path, v["cta_h"], v["cta_p"]) + footer(lang, path)
     emit(path, out, lang, alt)
 
