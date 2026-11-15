@@ -340,7 +340,6 @@ PRACTICES_1 = [
    "Данък при източника и прилагане на спогодбите за избягване на двойното данъчно облагане (СИДДО)",
    "Място на стопанска дейност и данъчна резидентност",
    "Данъчно третиране на възнаграждения, опции и дивиденти",
-   "Сделки между свързани лица и трансферно ценообразуване",
    "Представителство при данъчни проверки и ревизии",
    "Обжалване на ревизионни актове по административен и съдебен ред",
    "Правни становища и запитвания до Националната агенция за приходите"
@@ -369,7 +368,6 @@ PRACTICES_1 = [
    "Withholding tax and application of double tax treaties",
    "Permanent establishment and tax residence",
    "Tax treatment of remuneration, options and dividends",
-   "Related-party transactions",
    "Representation in tax inspections and audits",
    "Administrative and judicial appeals against tax assessments",
    "Tax opinions and requests for rulings from the National Revenue Agency"
