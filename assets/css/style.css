@@ -795,3 +795,11 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:manual}
   #ekip .grid-2,#team .grid-2{align-items:start}
   #ekip .portrait,#team .portrait{justify-self:end;margin-top:7px}
 }
+/* team block: photo column sized to the photo, aligned with the page edge; text takes the rest */
+@media (min-width:781px){
+  #ekip .grid-2,#team .grid-2{grid-template-columns:minmax(240px,340px) 1fr;gap:64px}
+  #ekip .portrait,#team .portrait{justify-self:start}
+}
+@media (min-width:781px) and (max-width:1080px){
+  #ekip .grid-2,#team .grid-2{grid-template-columns:260px 1fr;gap:40px}
+}
