@@ -281,8 +281,7 @@ PRACTICES_1 = [
    "Удостоверения за пребиваване на граждани на ЕС и членове на семействата им",
    "Събиране на семейството",
    "Виза за дългосрочно пребиваване (тип D) и съдействие пред дипломатическите и консулските представителства",
-   "Подновяване и изменение на разрешения, смяна на работодателя",
-   "Обжалване на откази по административен и съдебен ред"
+   "Подновяване и изменение на разрешения, смяна на работодателя"
   ],
   "approach": "Преди подаването на документите извършваме оценка на допустимостта и изготвяме подробен график на всички стъпки и срокове. Клиентите получават списък на документите, които следва да осигурят, а ние поемаме комуникацията с компетентните органи.",
   "faq": [
@@ -313,8 +312,7 @@ PRACTICES_1 = [
    "Registration certificates for EU citizens and their family members",
    "Family reunification",
    "Type D visa and consular assistance",
-   "Renewals, amendments and change of employer",
-   "Appeals against refusals"
+   "Renewals, amendments and change of employer"
   ],
   "approach": "Before filing we assess eligibility and draw up a clear timeline with all steps and deadlines. Clients receive a checklist of the documents they need to provide, while we handle communication with the authorities.",
   "faq": [
