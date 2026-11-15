@@ -10,8 +10,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dist")
 PRACTICES = PRACTICES_1 + PRACTICES_2
 NEW_KEYS = {"startups", "tax", "compliance"}
-EMAIL = "office@smlegal.bg"
-CONTACT_EMAIL = "smarushkina@smlegal.bg"  # address used in the contact panel (mailto button, copy, shown address)
+EMAIL = "smarushkina@smlegal.bg"
 # Google Analytics 4 measurement ID (e.g. "G-XXXXXXX"). Leave empty to run without analytics.
 # Analytics loads ONLY after the visitor accepts analytics cookies in the cookie banner.
 GA_ID = ""
@@ -741,7 +740,7 @@ def build_contact(lang):
     out = head(lang, path, a["title"], a["desc"], alt, schema=[bc, {"@type": "ContactPage", "url": url(path), "about": {"@id": ORG_ID}}])
     out += header(lang, path, "contact", alt) + hero
     from urllib.parse import quote
-    mailto = f"mailto:{CONTACT_EMAIL}?subject={quote(a['mail_subj'])}&amp;body={quote(a['mail_body'])}"
+    mailto = f"mailto:{EMAIL}?subject={quote(a['mail_subj'])}&amp;body={quote(a['mail_body'])}"
     maps = "https://www.google.com/maps/search/?api=1&query=" + "Dobrotitsa+Despot+41,+Sofia+1612"
     out += f"""<section class="section"><div class="wrap contact-grid">
 <div class="reveal">
@@ -757,9 +756,9 @@ def build_contact(lang):
  <ul class="mail-list">{''.join(f'<li>{esc(i)}</li>' for i in a['mail_list'])}</ul>
  <div class="mail-actions">
   <a class="btn" href="{mailto}">{icon('mail')}<span>{a['mail_btn']}</span></a>
-  <button type="button" class="btn btn--ghost" data-copy="{CONTACT_EMAIL}" data-copied="{esc(a['copied'])}">{a['copy']}</button>
+  <button type="button" class="btn btn--ghost" data-copy="{EMAIL}" data-copied="{esc(a['copied'])}">{a['copy']}</button>
  </div>
- <p class="mail-addr"><a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a></p>
+ <p class="mail-addr"><a href="mailto:{EMAIL}">{EMAIL}</a></p>
  <p class="form-note-s">{a['mail_note']} <a href="{rel(path, ROUTES['privacy'][lang])}">{t['privacy'].lower()}</a>.</p>
 </div>
 </div></section>"""
@@ -771,24 +770,24 @@ PRIV = {
  "bg": {"title": "Политика за поверителност | SM Legal", "h1": "Политика за поверителност",
   "desc": "Политика за поверителност на SM Legal — как обработваме личните данни, предоставени чрез уебсайта smlegal.bg.",
   "body": """<p>Настоящата политика описва начина, по който SM Legal — Адвокатска кантора Марушкина („ние“), обработва личните данни на посетителите на уебсайта smlegal.bg и на лицата, които се свързват с нас.</p>
-<h2>Администратор на данните</h2><p>Адвокат Силвия Марушкина, адрес: гр. София 1612, ул. „Добротица Деспот“ № 41, електронна поща: office@smlegal.bg.</p>
+<h2>Администратор на данните</h2><p>Адвокат Силвия Марушкина, адрес: гр. София 1612, ул. „Добротица Деспот“ № 41, електронна поща: smarushkina@smlegal.bg.</p>
 <h2>Какви данни обработваме</h2><p>Обработваме данните, които ни предоставяте по електронна поща или по телефон — име, адрес на електронна поща, телефон, наименование на дружеството и съдържанието на съобщението. Уебсайтът не съдържа форми за въвеждане на лични данни.</p><p>При посещение на уебсайта хостинг доставчикът автоматично обработва техническа информация (IP адрес, вид на браузъра, дата и час на заявката), необходима за предоставянето и сигурността на уебсайта.</p>
 <h2>Цели и правно основание</h2><ul><li>отговор на вашето запитване и предприемане на стъпки преди сключването на договор за правна защита и съдействие — чл. 6, пар. 1, буква „б“ от Регламент (ЕС) 2016/679 (GDPR);</li><li>изпълнение на законови задължения, включително по Закона за адвокатурата и Закона за мерките срещу изпирането на пари — чл. 6, пар. 1, буква „в“ от GDPR;</li><li>законен интерес от сигурното и надеждно функциониране на уебсайта — чл. 6, пар. 1, буква „е“ от GDPR;</li><li>съгласие — по отношение на аналитичните бисквитки, ако бъдат използвани — чл. 6, пар. 1, буква „а“ от GDPR.</li></ul>
 <h2>Срок на съхранение</h2><p>Данните от запитвания, които не са довели до сключване на договор, се съхраняват за срок до 12 месеца. Данните на клиентите се съхраняват в сроковете, предвидени в приложимото законодателство.</p>
 <h2>Получатели</h2><p>Не предоставяме личните ви данни на трети лица, освен на доставчици на хостинг и имейл услуги, които действат като обработващи лични данни по наше възлагане, или когато това се изисква по закон. Уебсайтът се хоства от GitHub Pages (GitHub, Inc., САЩ); предаването на данни към САЩ се основава на Рамката за защита на данните между ЕС и САЩ и/или на стандартни договорни клаузи. Адвокатската тайна се спазва при всички обстоятелства.</p>
 <h2 id="cookies">Бисквитки</h2><p>Бисквитките са малки текстови файлове, които се съхраняват в браузъра ви. Уебсайтът не използва рекламни бисквитки. Шрифтовете се зареждат директно от нашия уебсайт, без заявки към външни услуги.</p><ul><li><strong>Необходими</strong> — запис в браузъра ви (localStorage, ключ „sm_cookie_consent“), който съхранява избора ви относно бисквитките за срок до 12 месеца. Не изисква съгласие.</li><li><strong>Аналитични</strong> — Google Analytics (Google Ireland Ltd.), за анонимизирана статистика на посещенията. Зареждат се единствено ако изрично ги приемете; срок на съхранение до 14 месеца.</li></ul><p>Можете да промените или оттеглите съгласието си по всяко време чрез връзката „Настройки за бисквитки“ в долната част на всяка страница или като изтриете бисквитките чрез настройките на браузъра си.</p>
-<h2>Вашите права</h2><p>Имате право на достъп до личните си данни, на тяхното коригиране и изтриване, на ограничаване на обработването, на преносимост и на възражение, както и право да оттеглите съгласието си по всяко време, без това да засяга законосъобразността на обработването преди оттеглянето. Можете да упражните правата си, като ни пишете на office@smlegal.bg. Имате право да подадете жалба до Комисията за защита на личните данни (www.cpdp.bg).</p>
+<h2>Вашите права</h2><p>Имате право на достъп до личните си данни, на тяхното коригиране и изтриване, на ограничаване на обработването, на преносимост и на възражение, както и право да оттеглите съгласието си по всяко време, без това да засяга законосъобразността на обработването преди оттеглянето. Можете да упражните правата си, като ни пишете на smarushkina@smlegal.bg. Имате право да подадете жалба до Комисията за защита на личните данни (www.cpdp.bg).</p>
 <p><em>Последна актуализация: ноември 2026 г.</em></p>"""},
  "en": {"title": "Privacy Policy | SM Legal", "h1": "Privacy Policy",
   "desc": "SM Legal privacy policy — how we process personal data submitted through the smlegal.bg website.",
   "body": """<p>This policy explains how SM Legal — Marushkina Law Firm ("we") processes the personal data of visitors to smlegal.bg and of persons who contact us.</p>
-<h2>Data controller</h2><p>Attorney-at-law Sylvia Marushkina, 41 Dobrotitsa Despot Str., Sofia 1612, Bulgaria, email: office@smlegal.bg.</p>
+<h2>Data controller</h2><p>Attorney-at-law Sylvia Marushkina, 41 Dobrotitsa Despot Str., Sofia 1612, Bulgaria, email: smarushkina@smlegal.bg.</p>
 <h2>Data we process</h2><p>We process the data you provide by email or by phone — name, email address, phone number, company name and the content of your message. The website contains no forms for entering personal data.</p><p>When you visit the website, the hosting provider automatically processes technical information (IP address, browser type, date and time of the request) needed to deliver and secure the site.</p>
 <h2>Purposes and legal basis</h2><ul><li>responding to your enquiry and taking steps prior to entering into an engagement — Art. 6(1)(b) of Regulation (EU) 2016/679 (GDPR);</li><li>compliance with legal obligations, including under the Bar Act and anti-money laundering legislation — Art. 6(1)(c) GDPR;</li><li>our legitimate interest in the secure and reliable operation of the website — Art. 6(1)(f) GDPR;</li><li>consent — for analytics cookies, if enabled — Art. 6(1)(a) GDPR.</li></ul>
 <h2>Retention</h2><p>Data from enquiries that do not result in an engagement are kept for up to 12 months. Client data are kept for the periods required by applicable law.</p>
 <h2>Recipients</h2><p>We do not disclose your data to third parties, except to hosting and email service providers acting on our behalf, or where required by law. The website is hosted by GitHub Pages (GitHub, Inc., USA); transfers to the USA rely on the EU–U.S. Data Privacy Framework and/or standard contractual clauses. Attorney–client privilege is observed at all times.</p>
 <h2 id="cookies">Cookies</h2><p>Cookies are small files stored in your browser. This website does not use advertising cookies. Fonts are served directly from our own site, with no requests to external services.</p><ul><li><strong>Necessary</strong> — a browser storage entry (localStorage, key “sm_cookie_consent”) that remembers your cookie choice for up to 12 months. No consent required.</li><li><strong>Analytics</strong> — Google Analytics (Google Ireland Ltd.), providing anonymised visit statistics. Loaded only if you expressly accept them; retention up to 14 months.</li></ul><p>You can change or withdraw your consent at any time via the “Cookie settings” link at the bottom of every page, or by deleting cookies in your browser settings.</p>
-<h2>Your rights</h2><p>You have the right of access, rectification, erasure, restriction of processing, data portability and objection, and the right to withdraw consent at any time. You may exercise your rights by writing to office@smlegal.bg. You also have the right to lodge a complaint with the Commission for Personal Data Protection (www.cpdp.bg).</p>
+<h2>Your rights</h2><p>You have the right of access, rectification, erasure, restriction of processing, data portability and objection, and the right to withdraw consent at any time. You may exercise your rights by writing to smarushkina@smlegal.bg. You also have the right to lodge a complaint with the Commission for Personal Data Protection (www.cpdp.bg).</p>
 <p><em>Last updated: November 2026</em></p>"""},
 }
 def build_privacy(lang):
