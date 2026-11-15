@@ -16,6 +16,15 @@ EMAIL = "office@smlegal.bg"
 GA_ID = ""
 TODAY = datetime.date(2026, 10, 6).isoformat()
 P = {p["key"]: p for p in PRACTICES}
+import hashlib
+def _ver(*files):
+    """Short content hash for cache-busting (?v=…) so browsers always load the current CSS/JS."""
+    h = hashlib.sha1()
+    for f in files:
+        with open(os.path.join(ROOT, f), "rb") as fh: h.update(fh.read())
+    return h.hexdigest()[:10]
+CSS_VER = _ver("assets/css/style.css", "assets/css/fonts.css")
+JS_VER = _ver("assets/js/main.js")
 esc = html.escape
 
 # ---------------------------------------------------------------- routes
@@ -168,7 +177,7 @@ def head(lang, path, title, desc, alt_path=None, og_type="website", schema=None,
         links += [f'<link rel="alternate" hreflang="bg" href="{url(bgp)}">',
                   f'<link rel="alternate" hreflang="en" href="{url(enp)}">',
                   f'<link rel="alternate" hreflang="x-default" href="{url(bgp)}">']
-    css = rel(path, "assets/css/style.css")
+    css = rel(path, "assets/css/style.css") + "?v=" + CSS_VER
     fav = rel(path, "assets/img/favicon.svg")
     ogimg = SITE + "/assets/img/og-image.png"
     graph = [org_schema()] + (schema or [])
@@ -197,7 +206,7 @@ def head(lang, path, title, desc, alt_path=None, og_type="website", schema=None,
 <link rel="icon" href="{fav}" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{rel(path, 'assets/img/apple-touch-icon.png')}">
 <link rel="preload" href="{rel(path, 'assets/fonts/raleway-cyrillic-400-normal.woff2')}" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{rel(path, 'assets/css/fonts.css')}">
+<link rel="stylesheet" href="{rel(path, 'assets/css/fonts.css')}?v={CSS_VER}">
 <link rel="stylesheet" href="{css}">
 <script type="application/ld+json">
 {ld}
@@ -258,7 +267,7 @@ def footer(lang, path):
 </footer>
 <a class="to-top" href="#main" aria-label="{t['back_top']}">{icon('up')}</a>
 {cookie_banner(lang, path)}
-<script src="{rel(path, 'assets/js/main.js')}" defer></script>
+<script src="{rel(path, 'assets/js/main.js')}?v={JS_VER}" defer></script>
 </body>
 </html>
 """
