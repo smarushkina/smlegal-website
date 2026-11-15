@@ -268,7 +268,7 @@ PRACTICES_1 = [
   "lead": "Консултираме граждани на ЕС и на трети държави в производствата за краткосрочно, продължително и постоянно пребиваване в България и съдействаме на работодателите при наемането на чуждестранни специалисти.",
   "paras": [
    "Представляваме клиентите си пред дирекция „Миграция“ на МВР, Агенцията по заетостта и дипломатическите и консулските представителства на Република България, изготвяме необходимите документи и подаваме заявленията прецизно и в срок, за да протече производството възможно най-ефективно.",
-   "Съветваме относно най-подходящия правен режим за всеки конкретен случай — синя карта на ЕС за висококвалифицирани специалисти, единно разрешение за пребиваване и работа, вътрешнокорпоративен трансфер, пребиваване на основание търговска дейност или инвестиция, както и събиране на семейството.",
+   "Съветваме относно най-подходящия правен режим за всеки конкретен случай — синя карта на ЕС за висококвалифицирани специалисти, единно разрешение за пребиваване и работа, вътрешнокорпоративен трансфер, пребиваване на основание търговска дейност или инвестиция, пребиваване чрез търговско представителство на чуждестранно дружество, както и събиране на семейството.",
    "Съчетаването на имиграционна и трудовоправна експертиза ни позволява да планираме процеса в цялост — от трудовия договор и обявата за свободното работно място до визата, адресната регистрация и подновяването на разрешението."
   ],
   "services": [
@@ -276,6 +276,7 @@ PRACTICES_1 = [
    "Единно разрешение за пребиваване и работа",
    "Вътрешнокорпоративен трансфер и командироване на работници",
    "Продължително пребиваване на основание търговска дейност или инвестиция",
+   "Пребиваване чрез търговско представителство на чуждестранно дружество",
    "Постоянно и дългосрочно пребиваване",
    "Удостоверения за пребиваване на граждани на ЕС и членове на семействата им",
    "Събиране на семейството",
@@ -287,6 +288,7 @@ PRACTICES_1 = [
   "faq": [
    ("Каква е разликата между синята карта на ЕС и единното разрешение?", "Синята карта е предназначена за висококвалифицирани специалисти с висше образование или съответен професионален опит, чието брутно възнаграждение надвишава законоустановения праг. Единното разрешение е общият режим за заетост на граждани на трети държави. Синята карта като правило предоставя по-благоприятни условия при смяна на работодателя и за членовете на семейството."),
    ("Каква е продължителността на процедурата?", "Сроковете зависят от вида на разрешението и от натовареността на компетентните органи. Обичайно производството отнема няколко месеца; реалистичен график предоставяме още при първата консултация."),
+   ("Може ли чуждестранно дружество да изпрати свой представител в България, без да учредява дружество?", "Да. Чуждестранното дружество може да регистрира търговско представителство в Българската търговско-промишлена палата. Представителството не е юридическо лице и не може да извършва стопанска дейност, но дава възможност на представителите на дружеството да получат разрешение за продължително пребиваване в България. Изготвяме документите за регистрацията и за разрешението за пребиваване и представляваме клиента пред компетентните органи."),
    ("Необходимо ли е разрешение, за да пребивават граждани на ЕС в България?", "Гражданите на ЕС нямат нужда от разрешение за работа, но при пребиваване над три месеца следва да получат удостоверение за продължително пребиваване. Членовете на семействата им, които не са граждани на ЕС, получават карта за пребиваване по отделна процедура.")
   ]
  },
@@ -298,7 +300,7 @@ PRACTICES_1 = [
   "lead": "We advise EU and third-country nationals on obtaining short-term, long-term and permanent residence in Bulgaria, and support employers in hiring foreign professionals.",
   "paras": [
    "We represent our clients before the Migration Directorate, the Employment Agency and consular offices, prepare all relevant documents and submit applications so as to achieve a positive result in the shortest possible time.",
-   "We advise on the most suitable regime for each case — the EU Blue Card for highly qualified professionals, the single residence and work permit, intra-corporate transfers, residence based on business activity or investment, and family reunification.",
+   "We advise on the most suitable regime for each case — the EU Blue Card for highly qualified professionals, the single residence and work permit, intra-corporate transfers, residence based on business activity or investment, residence through a commercial representative office of a foreign company, and family reunification.",
    "Combining immigration and employment law expertise allows us to plan the process as a whole — from the employment contract and job advertisement to the visa, address registration and renewal of the permit."
   ],
   "services": [
@@ -306,6 +308,7 @@ PRACTICES_1 = [
    "Single residence and work permit",
    "Intra-corporate transfers and posted workers",
    "Long-term residence based on business activity and investment",
+   "Residence through a commercial representative office of a foreign company",
    "Permanent and long-term EU residence",
    "Registration certificates for EU citizens and their family members",
    "Family reunification",
@@ -317,6 +320,7 @@ PRACTICES_1 = [
   "faq": [
    ("What is the difference between an EU Blue Card and a single permit?", "The EU Blue Card is designed for highly qualified professionals with higher education or equivalent professional experience and a salary above a set threshold. The single permit is the general employment regime for third-country nationals. The Blue Card usually offers more favourable conditions for changing employers and for family members."),
    ("How long does the procedure take?", "Timeframes depend on the type of permit and the workload of the authorities. The process usually takes several months, and we provide a realistic timeline at the first consultation."),
+   ("Can a foreign company send a representative to Bulgaria without setting up a company?", "Yes. The foreign company can register a commercial representative office with the Bulgarian Chamber of Commerce and Industry. The office is not a legal entity and may not carry out business activity, but it allows the company's representatives to obtain a long-term residence permit in Bulgaria. We prepare the documents for the registration and the residence permit and represent the client before the competent authorities."),
    ("Do EU citizens need a permit to live in Bulgaria?", "EU citizens do not need a work permit, but if they stay longer than three months they must obtain a long-term residence certificate. Their non-EU family members obtain a residence card under a separate procedure.")
   ]
  }
