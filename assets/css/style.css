@@ -759,3 +759,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:manual}
   .hub .hub__new{font-size:.66rem}
   .hub .hub__faq-l,.hub .hub__count span{font-size:.74rem}
 }
+
+/* portrait: smaller photo in About */
+.portrait{max-width:340px;width:100%;justify-self:center;align-self:start}
+@media (max-width:780px){.portrait{max-width:260px;margin:0 auto 8px}}
