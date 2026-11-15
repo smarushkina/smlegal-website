@@ -722,6 +722,33 @@ body{font-size:14.5px;line-height:1.7}
 .site-header .logo img,.site-header.is-scrolled .logo img{height:54px;transition:none}
 @media (max-width:1080px){.site-header .wrap,.site-header.is-scrolled .wrap{height:72px}.site-header .logo img,.site-header.is-scrolled .logo img{height:46px}}
 
+/* home: "When to contact us" list */
+.when h3{font-size:1.35rem;margin:0 0 18px}
+.when-list{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.when-list li{position:relative;padding:14px 0 14px 34px;border-top:1px solid var(--line);font-size:.95rem;line-height:1.6}
+.when-list li:last-child{border-bottom:1px solid var(--line)}
+.when-list li::before{content:"";position:absolute;left:4px;top:22px;width:14px;height:1px;background:var(--rose-d)}
+
+/* about v2 */
+.statement .eyebrow--center{display:flex;justify-content:center;margin-bottom:22px}
+.value-list{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+.value-list li{font-family:var(--display);font-weight:300;font-size:1.15rem;padding:14px 0;border-top:1px solid var(--line)}
+@media (max-width:780px){.value-list{grid-template-columns:1fr}}
+.statement .eyebrow{color:var(--rose)}
+
+/* v4: cleaner home — uniform light cards, no decorative quotes, more air */
+.motto--dark{background:#fff;color:var(--ink);border-color:var(--line)}
+.motto--dark blockquote{color:var(--ink)}
+.motto--dark::before{display:none}
+.motto::after{display:none}
+.motto{border:1px solid var(--line);box-shadow:none}
+.motto figcaption{font-size:.7rem}
+.motto blockquote{font-family:var(--display);font-weight:300;font-size:1.08rem;line-height:1.5}
+.hero h1{max-width:18ch}
+.hero h1 em{display:block}
+.when h3{font-size:1.5rem}
+.motto--dark figcaption{color:var(--rose-ink)}
+
 /* ===== Cross-device compatibility (iOS Safari, Android, tablets) ===== */
 .site-header{-webkit-backdrop-filter:saturate(160%) blur(10px)}
 img,svg,video{max-width:100%;height:auto}
