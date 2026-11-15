@@ -748,3 +748,41 @@ body{font-size:14.5px;line-height:1.7}
 .hero h1 em{display:block}
 .when h3{font-size:1.5rem}
 .motto--dark figcaption{color:var(--rose-ink)}
+
+/* ===== Cross-device compatibility (iOS Safari, Android, tablets) ===== */
+.site-header{-webkit-backdrop-filter:saturate(160%) blur(10px)}
+img,svg,video{max-width:100%;height:auto}
+.hub__grid>*,.grid-2>*,.contact-grid>*,.article-wrap>*{min-width:0}
+h1,h2,h3{overflow-wrap:break-word;hyphens:manual}
+@media (max-width:1080px){
+  /* a fixed menu inside a blurred header is clipped on mobile browsers — drop the blur, the bar is opaque anyway */
+  .site-header{-webkit-backdrop-filter:none;backdrop-filter:none;background:#4e525a}
+  .nav{top:72px;right:0;bottom:0;left:0;height:calc(100vh - 72px);height:calc(100dvh - 72px);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:calc(30px + env(safe-area-inset-bottom,0px))}
+  .burger{min-width:44px;min-height:44px}
+}
+@media (max-width:780px){
+  .eyebrow{font-size:.74rem;letter-spacing:.2em}
+  .btn,.nav .btn{font-size:.74rem}
+  .site-footer h4{font-size:.74rem}
+  .site-footer li a,.site-footer p,.foot-bottom,.foot-bottom a,.foot-links a,.linklike{font-size:.86rem}
+  .crumbs,.crumbs a{font-size:.74rem}
+  .hub__new{font-size:.62rem}
+  .hub__faq-l,.badge,.post__meta,.motto figcaption{font-size:.72rem}
+  .hub__panels{padding:28px 16px 24px;overflow:hidden}
+  .hub__tabs{max-width:100%}
+  .cookie{left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px))}
+  .cookie__in{padding:16px;gap:12px}
+  .cookie h2{font-size:1.05rem;margin-bottom:4px}
+  .cookie p{font-size:.84rem;line-height:1.5}
+  .cookie__btns .btn{padding:11px 10px;font-size:.66rem}
+  .to-top{right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px))}
+}
+@media (max-width:380px){
+  .wrap{padding-left:16px;padding-right:16px}
+  .hero h1{font-size:2rem}
+}
+@media (max-width:780px){
+  .cookie .cookie__btns .btn{font-size:.72rem;letter-spacing:.12em}
+  .hub .hub__new{font-size:.66rem}
+  .hub .hub__faq-l,.hub .hub__count span{font-size:.74rem}
+}
