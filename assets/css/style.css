@@ -682,3 +682,6 @@ h3{font-size:1.12rem}
 }
 .cookie [hidden]{display:none!important}
 @media (max-width:780px){.cookie__btns{display:grid;grid-template-columns:1fr 1fr}.cookie__btns [data-cookie="accept"],.cookie__btns [data-cookie="save"]{grid-column:1/-1}.cookie h2{font-size:1.1rem}}
+
+/* active Contact button in the nav: keep text readable */
+.nav .btn[aria-current]{color:var(--ink)}
