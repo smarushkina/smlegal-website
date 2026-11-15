@@ -11,6 +11,7 @@ OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dist")
 PRACTICES = PRACTICES_1 + PRACTICES_2
 NEW_KEYS = {"startups", "tax", "compliance"}
 EMAIL = "office@smlegal.bg"
+CONTACT_EMAIL = "smarushkina@smlegal.bg"  # address used in the contact panel (mailto button, copy, shown address)
 # Google Analytics 4 measurement ID (e.g. "G-XXXXXXX"). Leave empty to run without analytics.
 # Analytics loads ONLY after the visitor accepts analytics cookies in the cookie banner.
 GA_ID = ""
@@ -740,7 +741,7 @@ def build_contact(lang):
     out = head(lang, path, a["title"], a["desc"], alt, schema=[bc, {"@type": "ContactPage", "url": url(path), "about": {"@id": ORG_ID}}])
     out += header(lang, path, "contact", alt) + hero
     from urllib.parse import quote
-    mailto = f"mailto:{EMAIL}?subject={quote(a['mail_subj'])}&amp;body={quote(a['mail_body'])}"
+    mailto = f"mailto:{CONTACT_EMAIL}?subject={quote(a['mail_subj'])}&amp;body={quote(a['mail_body'])}"
     maps = "https://www.google.com/maps/search/?api=1&query=" + "Dobrotitsa+Despot+41,+Sofia+1612"
     out += f"""<section class="section"><div class="wrap contact-grid">
 <div class="reveal">
@@ -756,9 +757,9 @@ def build_contact(lang):
  <ul class="mail-list">{''.join(f'<li>{esc(i)}</li>' for i in a['mail_list'])}</ul>
  <div class="mail-actions">
   <a class="btn" href="{mailto}">{icon('mail')}<span>{a['mail_btn']}</span></a>
-  <button type="button" class="btn btn--ghost" data-copy="{EMAIL}" data-copied="{esc(a['copied'])}">{a['copy']}</button>
+  <button type="button" class="btn btn--ghost" data-copy="{CONTACT_EMAIL}" data-copied="{esc(a['copied'])}">{a['copy']}</button>
  </div>
- <p class="mail-addr"><a href="mailto:{EMAIL}">{EMAIL}</a></p>
+ <p class="mail-addr"><a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a></p>
  <p class="form-note-s">{a['mail_note']} <a href="{rel(path, ROUTES['privacy'][lang])}">{t['privacy'].lower()}</a>.</p>
 </div>
 </div></section>"""
