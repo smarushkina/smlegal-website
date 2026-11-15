@@ -728,3 +728,10 @@ body{font-size:14.5px;line-height:1.7}
 .when-list li{position:relative;padding:14px 0 14px 34px;border-top:1px solid var(--line);font-size:.95rem;line-height:1.6}
 .when-list li:last-child{border-bottom:1px solid var(--line)}
 .when-list li::before{content:"";position:absolute;left:4px;top:22px;width:14px;height:1px;background:var(--rose-d)}
+
+/* about v2 */
+.statement .eyebrow--center{display:flex;justify-content:center;margin-bottom:22px}
+.value-list{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+.value-list li{font-family:var(--display);font-weight:300;font-size:1.15rem;padding:14px 0;border-top:1px solid var(--line)}
+@media (max-width:780px){.value-list{grid-template-columns:1fr}}
+.statement .eyebrow{color:var(--rose)}

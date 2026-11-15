@@ -507,7 +507,32 @@ ABOUT = {
    ("How we work", ["Every engagement starts with a clear definition of the task, timeline and fees. We offer hourly rates, fixed fees for defined services and retainer arrangements for clients with ongoing needs."])],
   "facts": [("11", "areas of business law"), ("2", "working languages — BG / EN"), ("1", "business day response time"), ("100%", "business focus")]},
 }
+
+# ---- About page v2 (BG): structure modelled on story → vision → personal care → values → testimonials → insights
+ABOUT_V2 = {"bg": {
+  "h1": "Правна грижа за вашия бизнес",
+  "sub": "SM Legal е адвокатска кантора в София, която работи с дружества, основатели и инвеститори — от първата регистрация до всяка следваща стъпка в растежа им.",
+  "story_eb": "Нашата история",
+  "story_h": "Кантора, изградена около нуждите на бизнеса",
+  "story_p": ["SM Legal е основана от адв. Силвия Марушкина с ясна цел: бизнесът да има правен съветник, който разбира как работи, отговаря навреме и предлага решения, които могат да се приложат.",
+              "Днес кантората съветва български и чуждестранни дружества по корпоративни, инвестиционни, трудови, имиграционни и регулаторни въпроси. Към всеки клиент подхождаме като към дългосрочен партньор и познаваме дейността му, а не само поредния му въпрос."],
+  "vision_eb": "Визия",
+  "vision": "Правен съвет, който е <strong>ясен, навременен и приложим</strong> — за да можете да се съсредоточите върху развитието на бизнеса си.",
+  "care_eb": "Лична ангажираност",
+  "care_h": "Отнасяме се към вашия бизнес лично",
+  "care_p": ["Всеки казус се води лично от адвоката, който го е поел — от първата консултация до приключването му. Не прехвърляме клиента от един човек на друг и не изпращаме шаблонни отговори.",
+             "Преди да започнем, получавате писмено обхвата на работата, сроковете и възнаграждението. Така знаете какво да очаквате на всяка стъпка."],
+  "values_eb": "Ценности",
+  "values_h": "Какво ценим най-много",
+  "values": ["Почтеност", "Поверителност", "Яснота", "Отговорност", "Навременност", "Бизнес мислене", "Лична ангажираност"],
+  "ins_eb": "Публикации", "ins_h": "Последни публикации",
+  "cta_h": "С какво можем да помогнем?",
+  "cta_p": "Опишете накратко въпроса си — ще ви отговорим в рамките на един работен ден с предложение за следващите стъпки.",
+}}
+
 def build_about(lang):
+    if lang in ABOUT_V2:
+        return build_about_v2(lang)
     a = ABOUT[lang]; t = T[lang]; h = HOME[lang]
     path = ROUTES["about"][lang]; alt = ROUTES["about"]["en" if lang == "bg" else "bg"]
     hero, bc = page_hero(lang, path, [(a["h1"], path)], a["h1"], a["sub"])
@@ -627,8 +652,7 @@ TEAM = {
   "desc": "Адвокат Силвия Марушкина — търговско и корпоративно право, венчър капитал, интелектуална собственост, имиграционно и трудово право. Основател на SM Legal, София.",
   "h1": "Екип", "sub": "Зад всяко решение стои личен ангажимент към успеха на клиента.",
   "bio": ["Адв. Силвия Марушкина е основател на SM Legal. Работи с дружества и предприемачи по въпросите, които определят следващата им стъпка — учредяване и корпоративни промени, инвестиционни сделки, търговски марки и наемане на служители от чужбина.",
-          "В практиката си съчетава корпоративното право с имиграционното, трудовото и данъчното. Така един и същ адвокат вижда цялата картина — например когато чуждестранна компания открива дружество в България и наема първите си служители.",
-          "Всеки казус води лично — от първата консултация до приключването му. Клиентите знаят с кого говорят и получават отговор, на който могат да разчитат."],
+          "В практиката си съчетава корпоративното право с имиграционното, трудовото и данъчното. Така един и същ адвокат вижда цялата картина — например когато чуждестранна компания открива дружество в България и наема първите си служители."],
   "focus": "Основни области", "langs_h": "Езици"},
  "en": {"title": "Team — Sylvia Marushkina, Attorney-at-law | SM Legal",
   "desc": "Sylvia Marushkina, attorney-at-law — corporate and commercial law, venture capital, intellectual property, immigration and employment law. Founder of SM Legal, Sofia.",
@@ -643,6 +667,27 @@ def person_schema(lang, path):
     return {"@type": "Person", "@id": PERSON_ID, "name": t["author"], "jobTitle": t["author_role"], "worksFor": {"@id": ORG_ID},
             "knowsLanguage": ["bg", "en"], "knowsAbout": [P[k][lang]["title"] for k in ["corporate", "vc", "ip", "immigration", "employment"]],
             "image": SITE + "/assets/img/Sylvia-Marushkina-3.jpg", "url": url(path) + ("#ekip" if lang == "bg" else "#team")}
+
+def build_about_v2(lang):
+    a = ABOUT[lang]; v = ABOUT_V2[lang]; t = T[lang]; h = HOME[lang]
+    path = ROUTES["about"][lang]; alt = ROUTES["about"]["en" if lang == "bg" else "bg"]
+    hero, bc = page_hero(lang, path, [(a["h1"], path)], v["h1"], v["sub"])
+    out = head(lang, path, a["title"], a["desc"], alt, schema=[bc, {"@type": "AboutPage", "url": url(path), "name": a["h1"], "about": {"@id": ORG_ID}}, person_schema(lang, path)])
+    out += header(lang, path, "about", alt) + hero
+    out += f"""<section class="section"><div class="wrap grid-2 grid-2--top">
+ <div class="reveal"><span class="eyebrow">{v['story_eb']}</span><h2>{v['story_h']}</h2></div>
+ <div class="reveal">{''.join('<p>'+esc(x)+'</p>' for x in v['story_p'])}</div>
+</div></section>
+<section class="statement"><div class="wrap reveal"><span class="eyebrow eyebrow--center">{v['vision_eb']}</span><p>{v['vision']}</p></div></section>
+<section class="section section--white"><div class="wrap grid-2 grid-2--top">
+ <div class="reveal"><span class="eyebrow">{v['care_eb']}</span><h2>{v['care_h']}</h2>{''.join('<p>'+esc(x)+'</p>' for x in v['care_p'])}</div>
+ <div class="reveal"><span class="eyebrow">{v['values_eb']}</span><h2>{v['values_h']}</h2><ul class="value-list">{''.join('<li>'+esc(x)+'</li>' for x in v['values'])}</ul></div>
+</div></section>"""
+    out += team_block(lang, path)
+    out += f'<section class="section section--sand"><div class="wrap"><div class="sec-head sec-head--center"><span class="eyebrow">{h["q_eb"]}</span><h2>{h["q_h"]}</h2></div>{slider(lang)}</div></section>'
+    out += f'<section class="section"><div class="wrap"><div class="sec-head"><span class="eyebrow">{v["ins_eb"]}</span><h2>{v["ins_h"]}</h2></div><div class="posts">{"".join(post_card(y, lang, path) for y in sorted_posts()[:3])}</div></div></section>'
+    out += cta_band(lang, path, v["cta_h"], v["cta_p"]) + footer(lang, path)
+    emit(path, out, lang, alt)
 
 def team_block(lang, path):
     a = TEAM[lang]; t = T[lang]
