@@ -217,7 +217,8 @@ PRACTICES_1 = [
    "Клаузи за поверителност и защита на търговската тайна",
    "Наемане на граждани на ЕС и на трети държави",
    "Регистрация на предприятия, осигуряващи временна работа",
-   "Трудовоправни одити и текущо консултиране"
+   "Трудовоправни одити и текущо консултиране",
+   "Съдействие и защита пред Инспекцията по труда — при проверки, предписания и наказателни постановления"
   ],
   "approach": "Започваме с преглед на действащата документация и на установените практики в компанията. Предлагаме конкретни корекции, образци за повтарящите се ситуации и кратки обучения за ръководителите, така че правилата да се прилагат последователно.",
   "faq": [
@@ -246,7 +247,8 @@ PRACTICES_1 = [
    "Confidentiality and non-compete provisions",
    "Hiring EU and third-country nationals",
    "Registration as a temporary work agency",
-   "Employment law audits and day-to-day advice"
+   "Employment law audits and day-to-day advice",
+   "Assistance and representation before the Labour Inspectorate — inspections, mandatory instructions and penalty decisions"
   ],
   "approach": "We start with a review of existing documentation and of how things actually work in the company. We propose specific corrections, templates for recurring situations and short training sessions for managers, so that the rules are applied consistently.",
   "faq": [
