@@ -689,7 +689,7 @@ def team_block(lang, path):
     anchor = "ekip" if lang == "bg" else "team"
     tags = "".join(f'<li><a href="{rel(path, practice_path(k, lang))}">{esc(P[k][lang]["title"])}</a></li>' for k in ["corporate", "vc", "startups", "ip", "immigration", "employment"])
     return f"""<section class="section section--white" id="{anchor}"><div class="wrap grid-2 grid-2--top">
- <div class="portrait reveal"><img src="{rel(path, 'assets/img/Sylvia-Marushkina-3.jpg')}" alt="{t['author']}" width="800" height="1000" loading="lazy" onerror="this.remove()"></div>
+ <div class="portrait reveal"><img src="{rel(path, 'assets/img/Sylvia-Marushkina-3.jpg')}" alt="{t['author']}" width="640" height="800" loading="lazy" onerror="this.remove()"></div>
  <div class="reveal"><span class="eyebrow">{a['h1']}</span><p class="role">{t['author_role']}</p><h2>{t['author']}</h2>
  {''.join('<p>'+esc(x)+'</p>' for x in a['bio'])}
  <h3 style="margin-top:30px">{a['focus']}</h3><ul class="tags">{tags}</ul>
