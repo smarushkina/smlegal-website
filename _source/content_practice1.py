@@ -19,14 +19,15 @@ PRACTICES_1 = [
    "Учредяване на търговски дружества (ООД, ЕООД, АД, ЕАД) и регистрация на клонове на чуждестранни търговци",
    "Сделки с дружествени дялове и акции",
    "Сливания и придобивания (M&A) и преобразуване на дружества",
-   "Увеличаване и намаляване на капитала, включително привеждане на капитала в евро",
+   "Увеличаване и намаляване на капитала",
    "Вписване на промени в органите на управление, седалището и адреса на управление, предмета на дейност и състава на съдружниците",
    "Съвместни предприятия и споразумения между съдружници и акционери",
    "Правен одит (due diligence) на дружества и активи",
    "Изготвяне, преглед и договаряне на търговски договори",
    "Правни становища и представителство в преговори",
    "Текущо корпоративно обслужване — общи събрания, протоколи и решения на органите, обявяване на годишни финансови отчети",
-   "Ликвидация и производство по несъстоятелност"
+   "Ликвидация на дружества",
+   "Производство по несъстоятелност"
   ],
   "approach": "Всяка корпоративна промяна започва с преглед на актуалното състояние на дружеството — учредителни актове, вписани обстоятелства и действащи договори. Така своевременно откриваме несъответствията и изготвяме пакет от документи, който отговаря на изискванията на регистърното производство.",
   "faq": [
@@ -50,14 +51,15 @@ PRACTICES_1 = [
    "Incorporation of limited liability and joint-stock companies and branches of foreign entities",
    "Transfer of shares in limited liability and joint-stock companies",
    "Mergers, acquisitions and corporate transformations",
-   "Increase and decrease of share capital, including redenomination of capital in euro",
+   "Increase and decrease of share capital",
    "Changes of management, registered address, business scope and shareholders",
    "Joint ventures and shareholders' agreements",
    "Legal due diligence of companies and assets",
    "Drafting and review of commercial agreements",
    "Legal opinions and participation in negotiations",
    "Ongoing corporate housekeeping — general meetings, minutes, annual resolutions",
-   "Liquidation and insolvency proceedings"
+   "Liquidation of companies",
+   "Insolvency proceedings"
   ],
   "approach": "Every corporate change starts with a short review of the company's current position — up-to-date constitutional documents, registered circumstances and key contracts. This allows us to detect inconsistencies early and prepare a set of documents that is registered at the first attempt.",
   "faq": [
