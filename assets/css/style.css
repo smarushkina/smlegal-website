@@ -763,3 +763,8 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:manual}
 /* portrait: smaller photo in About */
 .portrait{max-width:340px;width:100%;justify-self:center;align-self:start}
 @media (max-width:780px){.portrait{max-width:260px;margin:0 auto 8px}}
+/* portrait sits next to the text, top edge on one line with it */
+@media (min-width:781px){
+  #ekip .grid-2,#team .grid-2{align-items:start}
+  #ekip .portrait,#team .portrait{justify-self:end;margin-top:7px}
+}
