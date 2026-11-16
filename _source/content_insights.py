@@ -295,7 +295,7 @@ INSIGHTS = [
  }
 },
 {
- "id": "eor", "type": "article", "date": "2026-11-16", "practice": "employment", "read": 7, "bold_headings": True,
+ "id": "eor", "type": "article", "date": "2026-11-16", "practice": "employment", "read": 7, "dark_headings": True,
  "bg": {
   "slug": "employer-of-record-eor-v-balgariya",
   "title": "Employer of Record (EOR) в България: правна рамка, предимства и особености на модела",
@@ -353,7 +353,7 @@ INSIGHTS = [
 <p>Наемането на служители в България чрез EOR не означава автоматично, че чуждестранната компания ще има място на стопанска дейност в страната. Въпросът обаче следва да бъде разгледан с оглед конкретните функции на служителите, правомощията им, характера на дейността и приложимата <a href="../pravni-uslugi/danatsi-i-dds.html">спогодба за избягване на двойното данъчно облагане</a>.</p>
 <p>Особено внимание е необходимо, когато служителите участват в управлението на бизнеса, договарянето или сключването на договори от името на чуждестранната компания.</p>
 <h2>EOR или собствено дружество в България?</h2>
-<p>Изборът между EOR и учредяване на собствено дружество зависи от плановете на компанията, броя на служителите, продължителността на дейността и степента на контрол, която тя желае да упражнява върху местния екип.</p>
+<p>Изборът между EOR и <a href="naemane-na-sluzhiteli-v-balgariya-bez-mestno-druzhestvo.html">учредяване на собствено дружество</a> зависи от плановете на компанията, броя на служителите, продължителността на дейността и степента на контрол, която тя желае да упражнява върху местния екип.</p>
 <p>EOR може да бъде подходящо решение за компании, които:</p>
 <ul>
 <li>планират да наемат един или няколко служители в България;</li>
@@ -441,7 +441,7 @@ INSIGHTS = [
 <p>Hiring employees in Bulgaria through an EOR does not automatically mean that the foreign company will have a permanent establishment in the country. The question should, however, be examined in light of the employees' specific functions and authority, the nature of the activity and the applicable <a href="../practice-areas/tax-vat.html">double taxation treaty</a>.</p>
 <p>Particular care is needed where the employees take part in managing the business or in negotiating or concluding contracts on behalf of the foreign company.</p>
 <h2>EOR or your own company in Bulgaria?</h2>
-<p>The choice between EOR and setting up your own company depends on the company's plans, the number of employees, the duration of the activity and the degree of control it wishes to exercise over the local team.</p>
+<p>The choice between EOR and <a href="hiring-employees-in-bulgaria-without-local-company.html">setting up your own company</a> depends on the company's plans, the number of employees, the duration of the activity and the degree of control it wishes to exercise over the local team.</p>
 <p>EOR may be a suitable solution for companies that:</p>
 <ul>
 <li>plan to hire one or a few employees in Bulgaria;</li>
@@ -470,6 +470,183 @@ INSIGHTS = [
     "That depends on the legal structure. The temporary agency work regime provides specific grounds for concluding the employment contract. Under a genuine provision-of-services model, employment contracts may be for an indefinite term, subject to the general requirements of employment law."),
    ("Does a foreign company need to register a company in Bulgaria if it uses an EOR?",
     "Not necessarily. One of the main practical purposes of EOR is to allow a company to hire local staff through a Bulgarian provider without first setting up its own company. It should be assessed separately, however, whether the specific activity and the presence of the employees give rise to other registration or tax obligations."),
+  ],
+ }
+},
+{
+ "id": "hiring-models", "type": "article", "date": "2026-11-16", "practice": "employment", "read": 8, "dark_headings": True,
+ "bg": {
+  "slug": "naemane-na-sluzhiteli-v-balgariya-bez-mestno-druzhestvo",
+  "title": "Наемане на служители в България без местно дружество: EOR, временна работа или собствено дружество?",
+  "seo_title": "Наемане на служители в България без дружество",
+  "seo_desc": "Как чуждестранна компания може да наеме служители в България без местно дружество: EOR, временна работа или собствено дружество – сравнение и правна рамка.",
+  "excerpt": "Три модела за наемане на служители в България от чуждестранна компания — Employer of Record (EOR), предприятие за временна работа и собствено дружество — и как да изберете подходящия.",
+  "body": """
+<p>Чуждестранните компании, които искат да развиват дейност в България, могат да изберат различни модели за наемане и управление на местни служители. В някои случаи компанията може да започне работа с екип в България, без да учредява собствено дружество. В други ситуации създаването на местно юридическо лице може да осигури по-подходяща и устойчива структура.</p>
+<p>Сред възможните решения са използването на Employer of Record (EOR), наемането на служители чрез предприятие, което осигурява временна работа, или учредяването на собствено българско дружество.</p>
+<p>Всеки от тези варианти има различна правна рамка, разпределение на отговорностите и практически последици. Затова изборът следва да бъде съобразен с характера на дейността, броя на служителите и плановете на компанията за присъствие на българския пазар.</p>
+<h2>1. Наемане чрез Employer of Record (EOR)</h2>
+<p><a href="employer-of-record-eor-v-balgariya.html">Employer of Record</a> е модел, при който местен доставчик сключва трудови договори със служители в България и поема формалните задължения на работодател.</p>
+<p>Обичайно доставчикът отговаря за трудовата документация, обработката на възнагражденията, данъците и осигурителните вноски, както и за администрирането на отпуските и други трудови права.</p>
+<p>Чуждестранната компания обикновено определя бизнес задачите и оперативните приоритети на служителите, без сама да бъде страна по техните трудови договори.</p>
+<h3>Предимства</h3>
+<p>EOR може да позволи на компанията да започне работа с местни служители по-бързо, без веднага да учредява българско дружество. Моделът може да намали административната тежест и да осигури достъп до местна експертиза по трудово и осигурително право.</p>
+<p>Той може да бъде полезен при първоначално навлизане на пазара, наемане на ограничен брой служители или проверка на бизнес възможностите в България.</p>
+<h3>Правни особености</h3>
+<p>Българското законодателство не урежда EOR като самостоятелен правен институт. Поради това е необходимо да се анализира действителното съдържание на отношенията между доставчика, чуждестранната компания и служителите.</p>
+<p>В зависимост от организацията на работата моделът може да има характеристики на предоставяне на временна работа по смисъла на чл. 107р и следващите от Кодекса на труда. В такъв случай следва да бъдат спазени приложимите законови изисквания, включително регистрационните изисквания по Закона за насърчаване на заетостта.</p>
+<p>Когато отношенията са организирани като самостоятелно предоставяне на услуга, доставчикът следва действително да организира дейността и да носи отговорност за договорения резултат. Самото наименование на договора не е достатъчно, за да определи неговата правна квалификация.</p>
+<h2>2. Наемане чрез предприятие, което осигурява временна работа</h2>
+<p>Предприятието, което осигурява временна работа, е изрично уреден в българското <a href="../pravni-uslugi/trudovo-pravo.html">трудово законодателство</a> модел.</p>
+<p>При него предприятието сключва трудов договор с работника или служителя и го предоставя на предприятие ползвател за изпълнение на работа при условията и реда, предвидени в Кодекса на труда.</p>
+<p>Този модел може да бъде подходящ за компании, които имат нужда от персонал за определен период, за конкретен проект или при временно увеличение на обема на работа.</p>
+<h3>Предимства</h3>
+<p>Временната работа осигурява законово уредена рамка за предоставяне на работна сила между отделни предприятия.</p>
+<p>Тя може да бъде полезна, когато компанията има конкретна и ограничена във времето нужда от персонал, без да изгражда собствена постоянна структура за наемане и управление на служители.</p>
+<h3>Правни особености</h3>
+<p>Режимът е уреден в чл. 107р и следващите от Кодекса на труда и е свързан с изискванията на Закона за насърчаване на заетостта.</p>
+<p>Предприятието, което осигурява временна работа, трябва да отговаря на законовите условия за извършване на тази дейност, включително да бъде регистрирано в Агенцията по заетостта.</p>
+<p>Законодателството предвижда специални правила относно трудовите договори, правата на служителите, отношенията с предприятието ползвател и финансовите гаранции. Съществуват и ограничения за използването на временна работа в определени случаи и при определени условия.</p>
+<p>Поради това този модел следва да бъде планиран с оглед на конкретната нужда от персонал и приложимите законови ограничения.</p>
+<h2>3. Учредяване на собствено дружество в България</h2>
+<p>Чуждестранната компания може да <a href="../pravni-uslugi/targovsko-i-korporativno-pravo.html">учреди българско дружество</a>, което самостоятелно да наема служители и да извършва дейност в страната.</p>
+<p>Това е по-структурирано решение, което обичайно изисква повече първоначална организация и текущо административно обслужване, но осигурява по-голяма самостоятелност при управлението на местната дейност.</p>
+<h3>Предимства</h3>
+<p>Собственото дружество позволява на компанията да бъде пряк работодател на служителите в България и да управлява трудовите отношения чрез собствената си местна структура.</p>
+<p>То може да бъде подходящо при по-голям екип, дългосрочно присъствие или планиране на съществена оперативна дейност в страната.</p>
+<p>Местното дружество може да улесни и сключването на договори с български клиенти и доставчици, както и организирането на други бизнес отношения на местно ниво.</p>
+<h3>Правни и административни особености</h3>
+<p>Учредяването на дружество предполага регистрация в Търговския регистър, организиране на счетоводно обслужване и изпълнение на приложимите данъчни, осигурителни и административни задължения.</p>
+<p>Като работодател дружеството трябва да спазва изискванията на Кодекса на труда, включително относно сключването и прекратяването на трудови договори, работното време, отпуските, възнагражденията и здравословните и безопасни условия на труд.</p>
+<p>Необходимо е също да се предвидят разходите за поддръжка на дружеството и за неговото административно и счетоводно обслужване.</p>
+<h2>4. Как да изберете подходящия модел?</h2>
+<p>Няма универсално решение, което да е най-подходящо за всички чуждестранни компании. Изборът зависи от конкретната бизнес ситуация и от начина, по който ще бъде организирана работата на служителите.</p>
+<h3>Когато компанията иска да започне с ограничен брой служители</h3>
+<p>EOR може да бъде практичен вариант, ако целта е бързо започване на работа в България без незабавно учредяване на местно дружество. Преди избора обаче следва да се провери дали конкретният модел е съобразен с приложимия режим за предоставяне на работна сила или услуги.</p>
+<h3>Когато нуждата от персонал е временна</h3>
+<p>Предприятие, което осигурява временна работа, може да бъде подходящо решение при проектна заетост, временно увеличение на работата или други хипотези, допустими съгласно Кодекса на труда.</p>
+<h3>Когато се планира дългосрочно присъствие</h3>
+<p>Собственото дружество може да осигури по-голям контрол и самостоятелност при управлението на служителите и местната дейност. То често е вариант, който си заслужава да бъде разгледан при по-голям екип или дългосрочна бизнес стратегия.</p>
+<h3>Когато дейността има специфични данъчни или регулаторни особености</h3>
+<p>Независимо от избрания модел, е важно да се направи предварителна оценка на <a href="../pravni-uslugi/danatsi-i-dds.html">данъчните последици</a>, приложимите трудовоправни изисквания и евентуалните регулаторни задължения.</p>
+<p>Особено внимание следва да се обърне на фактическата роля на чуждестранната компания в управлението на служителите и на това дали дейността ѝ в България може да породи допълнителни данъчни последици, включително въпроси относно място на стопанска дейност.</p>
+<h2>5. Какво е важно да се провери преди започване на работа?</h2>
+<p>Преди да избере конкретен модел, чуждестранната компания следва да изясни няколко основни въпроса:</p>
+<ul>
+<li>Колко служители планира да наеме и за какъв период?</li>
+<li>Какъв ще бъде характерът на работата им?</li>
+<li>Кой ще организира ежедневната им дейност и ще определя работните им задачи?</li>
+<li>Необходимо ли е служителите да работят под непосредствения контрол на чуждестранната компания?</li>
+<li>Ще създават ли обекти на интелектуална собственост и как ще бъдат уредени правата върху тях?</li>
+<li>Какви са данъчните и осигурителните последици от избрания модел?</li>
+<li>Какви са общите разходи, включително административните такси и разходите при прекратяване на отношенията?</li>
+</ul>
+<p>Отговорите на тези въпроси могат да помогнат за избора на структура, която е едновременно практична за бизнеса и съобразена с българското законодателство.</p>
+<h2>Как можем да съдействаме?</h2>
+<p>Изборът между EOR, временна работа и собствено дружество изисква анализ на конкретната дейност, планирания екип и начина на управление на служителите.</p>
+<p>Можем да съдействаме на чуждестранни компании с оценка на възможните модели за наемане в България, анализ на трудовоправните и данъчните аспекти, учредяване на местно дружество и подготовка или преглед на необходимата договорна документация.</p>
+<p>Целта е да бъде избрана структура, която отговаря на бизнес нуждите на компанията и осигурява съответствие с приложимото българско законодателство.</p>
+""",
+  "faq": [
+   ("Може ли чуждестранна компания да наема служители в България без да има местно дружество?",
+    "Да. В зависимост от конкретната ситуация това може да стане чрез EOR доставчик или чрез предприятие, което осигурява временна работа. Необходимо е избраният модел да отговаря на приложимите законови изисквания."),
+   ("EOR и временната работа едно и също ли са?",
+    "Не непременно. EOR е договорен и бизнес модел, който не е уреден като самостоятелен правен институт в България. Временната работа е законово уреден режим. В зависимост от действителната организация на отношенията конкретен EOR модел може да попадне в режима на временната работа."),
+   ("Може ли чуждестранната компания сама да управлява ежедневната работа на служителите, наети чрез EOR?",
+    "Това зависи от конкретния модел и приложимия правен режим. Разпределението на функциите и отговорностите трябва да бъде внимателно уредено, като се отчита и фактическият начин на работа."),
+   ("Кога е необходимо учредяване на българско дружество?",
+    "Не съществува универсално правило, според което всяка чуждестранна компания, която наема служители в България, задължително трябва да учреди местно дружество. Необходимостта и целесъобразността зависят от характера и мащаба на дейността, както и от приложимите данъчни и регулаторни правила."),
+   ("Кой вариант е по-изгоден от финансова гледна точка?",
+    "Това зависи от броя на служителите, периода на заетост, таксите на доставчика и разходите за поддържане на собствено дружество. Сравнението следва да обхваща не само първоначалните разходи, но и дългосрочните административни и оперативни разходи."),
+   ("Може ли компанията по-късно да премине от EOR към собствено дружество?",
+    "Да. Компанията може да промени избрания модел, когато бизнесът ѝ в България се разрасне или когато местното присъствие стане по-дългосрочно. Преминаването следва да бъде планирано така, че да бъдат уредени надлежно трудовите правоотношения, договорите и останалите приложими задължения."),
+  ],
+ },
+ "en": {
+  "slug": "hiring-employees-in-bulgaria-without-local-company",
+  "title": "Hiring Employees in Bulgaria without a Local Company: EOR, Temporary Agency Work or Your Own Company?",
+  "seo_title": "Hiring Employees in Bulgaria without a Company",
+  "seo_desc": "How a foreign company can hire employees in Bulgaria without a local entity: EOR, temporary agency work or its own company – comparison and legal framework.",
+  "excerpt": "Three models for a foreign company hiring employees in Bulgaria — Employer of Record (EOR), a temporary work agency and its own company — and how to choose between them.",
+  "body": """
+<p>Foreign companies wishing to do business in Bulgaria can choose between different models for hiring and managing local employees. In some cases a company can start working with a team in Bulgaria without setting up its own company. In others, establishing a local legal entity may provide a more suitable and sustainable structure.</p>
+<p>The possible solutions include using an Employer of Record (EOR), hiring employees through a temporary work agency, or setting up the company's own Bulgarian entity.</p>
+<p>Each of these options has a different legal framework, allocation of responsibilities and practical consequences. The choice should therefore reflect the nature of the activity, the number of employees and the company's plans for its presence on the Bulgarian market.</p>
+<h2>1. Hiring through an Employer of Record (EOR)</h2>
+<p><a href="employer-of-record-eor-bulgaria-legal-framework.html">Employer of Record</a> is a model in which a local provider concludes employment contracts with employees in Bulgaria and takes on the formal obligations of an employer.</p>
+<p>The provider is usually responsible for the employment documentation, payroll, taxes and social security contributions, as well as for administering leave and other employment rights.</p>
+<p>The foreign company usually sets the employees' business tasks and operational priorities without itself being a party to their employment contracts.</p>
+<h3>Advantages</h3>
+<p>EOR can allow a company to start working with local employees more quickly, without immediately setting up a Bulgarian company. The model can reduce the administrative burden and provide access to local expertise in employment and social security law.</p>
+<p>It can be useful for initial market entry, for hiring a limited number of employees or for testing business opportunities in Bulgaria.</p>
+<h3>Legal considerations</h3>
+<p>Bulgarian law does not regulate EOR as a separate legal concept. It is therefore necessary to analyse the actual substance of the relationship between the provider, the foreign company and the employees.</p>
+<p>Depending on how the work is organised, the model may have the features of temporary agency work within the meaning of Article 107p et seq. of the Labour Code. In that case the applicable statutory requirements must be met, including the registration requirements under the Employment Promotion Act.</p>
+<p>Where the relationship is organised as an independent provision of services, the provider must genuinely organise the activity and be responsible for the agreed result. The name of the agreement alone is not sufficient to determine its legal classification.</p>
+<h2>2. Hiring through a temporary work agency</h2>
+<p>The temporary work agency is a model expressly regulated by Bulgarian <a href="../practice-areas/employment-law.html">employment law</a>.</p>
+<p>Under it, the agency concludes an employment contract with the employee and assigns him or her to a user undertaking to perform work under the terms and procedure laid down in the Labour Code.</p>
+<p>This model may suit companies that need staff for a defined period, for a specific project or during a temporary increase in workload.</p>
+<h3>Advantages</h3>
+<p>Temporary agency work provides a statutory framework for the provision of workforce between separate undertakings.</p>
+<p>It can be useful where a company has a specific, time-limited need for staff without building its own permanent structure for hiring and managing employees.</p>
+<h3>Legal considerations</h3>
+<p>The regime is set out in Article 107p et seq. of the Labour Code and is linked to the requirements of the Employment Promotion Act.</p>
+<p>A temporary work agency must meet the statutory conditions for carrying out this activity, including registration with the Employment Agency.</p>
+<p>The legislation lays down special rules on employment contracts, employees' rights, the relationship with the user undertaking and financial guarantees. There are also restrictions on the use of temporary agency work in certain cases and under certain conditions.</p>
+<p>This model should therefore be planned in light of the specific staffing need and the applicable statutory limitations.</p>
+<h2>3. Setting up your own company in Bulgaria</h2>
+<p>A foreign company may <a href="../practice-areas/corporate-commercial-law.html">set up a Bulgarian company</a> that hires employees and carries on business in the country in its own right.</p>
+<p>This is a more structured solution, which usually requires more initial organisation and ongoing administration but provides greater independence in managing the local activity.</p>
+<h3>Advantages</h3>
+<p>Having its own company allows the business to be the direct employer of the employees in Bulgaria and to manage the employment relationships through its own local structure.</p>
+<p>It may be appropriate for a larger team, a long-term presence or plans for substantial operations in the country.</p>
+<p>A local company can also make it easier to contract with Bulgarian clients and suppliers and to organise other business relationships locally.</p>
+<h3>Legal and administrative considerations</h3>
+<p>Setting up a company involves registration in the Commercial Register, arranging accounting services and complying with the applicable tax, social security and administrative obligations.</p>
+<p>As an employer, the company must comply with the Labour Code, including the rules on concluding and terminating employment contracts, working time, leave, remuneration and health and safety at work.</p>
+<p>The costs of maintaining the company and of its administrative and accounting services should also be budgeted for.</p>
+<h2>4. How to choose the right model</h2>
+<p>There is no universal solution that suits every foreign company. The choice depends on the specific business situation and on how the employees' work will be organised.</p>
+<h3>When the company wants to start with a limited number of employees</h3>
+<p>EOR can be a practical option if the aim is to start working in Bulgaria quickly without immediately setting up a local company. Before choosing it, however, it should be checked whether the specific model complies with the applicable regime for the provision of workforce or services.</p>
+<h3>When the need for staff is temporary</h3>
+<p>A temporary work agency may be a suitable solution for project-based work, a temporary increase in workload or other situations permitted under the Labour Code.</p>
+<h3>When a long-term presence is planned</h3>
+<p>Having its own company can give the business greater control and independence in managing employees and local operations. It is often an option worth considering for a larger team or a long-term business strategy.</p>
+<h3>When the activity has specific tax or regulatory features</h3>
+<p>Whichever model is chosen, it is important to assess in advance the <a href="../practice-areas/tax-vat.html">tax consequences</a>, the applicable employment law requirements and any regulatory obligations.</p>
+<p>Particular attention should be paid to the foreign company's actual role in managing the employees and to whether its activity in Bulgaria may give rise to additional tax consequences, including permanent establishment issues.</p>
+<h2>5. What should be checked before starting?</h2>
+<p>Before choosing a specific model, a foreign company should clarify several key questions:</p>
+<ul>
+<li>How many employees does it plan to hire, and for how long?</li>
+<li>What will be the nature of their work?</li>
+<li>Who will organise their day-to-day activity and set their tasks?</li>
+<li>Do the employees need to work under the direct supervision of the foreign company?</li>
+<li>Will they create intellectual property, and how will the rights in it be settled?</li>
+<li>What are the tax and social security consequences of the chosen model?</li>
+<li>What are the overall costs, including administrative fees and the costs of ending the arrangement?</li>
+</ul>
+<p>The answers to these questions can help in choosing a structure that is both practical for the business and compliant with Bulgarian law.</p>
+<h2>How we can help</h2>
+<p>Choosing between EOR, temporary agency work and your own company requires an analysis of the specific activity, the planned team and the way the employees will be managed.</p>
+<p>We can assist foreign companies with assessing the available hiring models in Bulgaria, analysing the employment law and tax aspects, setting up a local company and preparing or reviewing the necessary contractual documentation.</p>
+<p>The aim is to choose a structure that meets the company's business needs and ensures compliance with the applicable Bulgarian law.</p>
+""",
+  "faq": [
+   ("Can a foreign company hire employees in Bulgaria without having a local company?",
+    "Yes. Depending on the specific situation, this can be done through an EOR provider or through a temporary work agency. The chosen model must comply with the applicable statutory requirements."),
+   ("Are EOR and temporary agency work the same thing?",
+    "Not necessarily. EOR is a contractual and business model that is not regulated as a separate legal concept in Bulgaria. Temporary agency work is a statutory regime. Depending on how the relationship is actually organised, a particular EOR model may fall within the temporary agency work regime."),
+   ("Can the foreign company itself manage the day-to-day work of employees hired through an EOR?",
+    "That depends on the specific model and the applicable legal regime. The allocation of functions and responsibilities must be carefully agreed, taking into account how the work is actually carried out."),
+   ("When is it necessary to set up a Bulgarian company?",
+    "There is no universal rule requiring every foreign company that hires employees in Bulgaria to set up a local company. Whether it is necessary or advisable depends on the nature and scale of the activity and on the applicable tax and regulatory rules."),
+   ("Which option is more cost-effective?",
+    "That depends on the number of employees, the period of employment, the provider's fees and the costs of maintaining your own company. The comparison should cover not only the initial costs but also the long-term administrative and operating costs."),
+   ("Can the company later move from EOR to its own company?",
+    "Yes. A company can change the chosen model as its business in Bulgaria grows or as its local presence becomes longer-term. The transition should be planned so that the employment relationships, contracts and other applicable obligations are properly dealt with."),
   ],
  }
 },

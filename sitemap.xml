@@ -120,6 +120,11 @@
   <xhtml:link rel="alternate" hreflang="en" href="https://smlegal.bg/en/insights/employer-of-record-eor-bulgaria-legal-framework.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://smlegal.bg/publikatsii/employer-of-record-eor-v-balgariya.html"/>
  </url>
+ <url><loc>https://smlegal.bg/publikatsii/naemane-na-sluzhiteli-v-balgariya-bez-mestno-druzhestvo.html</loc><lastmod>2026-11-16</lastmod>
+  <xhtml:link rel="alternate" hreflang="bg" href="https://smlegal.bg/publikatsii/naemane-na-sluzhiteli-v-balgariya-bez-mestno-druzhestvo.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://smlegal.bg/en/insights/hiring-employees-in-bulgaria-without-local-company.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://smlegal.bg/publikatsii/naemane-na-sluzhiteli-v-balgariya-bez-mestno-druzhestvo.html"/>
+ </url>
  <url><loc>https://smlegal.bg/en/</loc><lastmod>2026-10-06</lastmod>
   <xhtml:link rel="alternate" hreflang="bg" href="https://smlegal.bg/"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://smlegal.bg/en/"/>
@@ -239,5 +244,10 @@
   <xhtml:link rel="alternate" hreflang="bg" href="https://smlegal.bg/publikatsii/employer-of-record-eor-v-balgariya.html"/>
   <xhtml:link rel="alternate" hreflang="en" href="https://smlegal.bg/en/insights/employer-of-record-eor-bulgaria-legal-framework.html"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://smlegal.bg/publikatsii/employer-of-record-eor-v-balgariya.html"/>
+ </url>
+ <url><loc>https://smlegal.bg/en/insights/hiring-employees-in-bulgaria-without-local-company.html</loc><lastmod>2026-11-16</lastmod>
+  <xhtml:link rel="alternate" hreflang="bg" href="https://smlegal.bg/publikatsii/naemane-na-sluzhiteli-v-balgariya-bez-mestno-druzhestvo.html"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://smlegal.bg/en/insights/hiring-employees-in-bulgaria-without-local-company.html"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://smlegal.bg/publikatsii/naemane-na-sluzhiteli-v-balgariya-bez-mestno-druzhestvo.html"/>
  </url>
 </urlset>
