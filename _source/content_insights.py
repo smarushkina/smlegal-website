@@ -546,6 +546,7 @@ INSIGHTS = [
 <p>Изборът между EOR, временна работа и собствено дружество изисква анализ на конкретната дейност, планирания екип и начина на управление на служителите.</p>
 <p>Можем да съдействаме на чуждестранни компании с оценка на възможните модели за наемане в България, анализ на трудовоправните и данъчните аспекти, учредяване на местно дружество и подготовка или преглед на необходимата договорна документация.</p>
 <p>Целта е да бъде избрана структура, която отговаря на бизнес нуждите на компанията и осигурява съответствие с приложимото българско законодателство.</p>
+<p><strong><a href="../kontakti.html">Свържете се с нас</a></strong>, за да обсъдим подходящия модел за наемане на служители в България, на <a href="mailto:smarushkina@smlegal.bg">smarushkina@smlegal.bg</a>.</p>
 """,
   "faq": [
    ("Може ли чуждестранна компания да наема служители в България без да има местно дружество?",
@@ -633,6 +634,7 @@ INSIGHTS = [
 <p>Choosing between EOR, temporary agency work and your own company requires an analysis of the specific activity, the planned team and the way the employees will be managed.</p>
 <p>We can assist foreign companies with assessing the available hiring models in Bulgaria, analysing the employment law and tax aspects, setting up a local company and preparing or reviewing the necessary contractual documentation.</p>
 <p>The aim is to choose a structure that meets the company's business needs and ensures compliance with the applicable Bulgarian law.</p>
+<p><strong><a href="../contact.html">Contact us</a></strong> at <a href="mailto:smarushkina@smlegal.bg">smarushkina@smlegal.bg</a> to discuss the right model for hiring employees in Bulgaria.</p>
 """,
   "faq": [
    ("Can a foreign company hire employees in Bulgaria without having a local company?",
