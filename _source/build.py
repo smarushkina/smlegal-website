@@ -688,7 +688,13 @@ def build_post(x, lang):
            "datePublished": x["date"], "dateModified": x["date"], "inLanguage": lang, "mainEntityOfPage": url(path),
            "image": SITE + "/assets/img/og-image.png", "author": {"@id": PERSON_ID, "@type": "Person", "name": t["author"]},
            "publisher": {"@id": ORG_ID}, "about": P[x["practice"]][lang]["title"]}
-    out = head(lang, path, d["title"] + " | SM Legal", d["excerpt"], alt, og_type="article", schema=[bc, art])
+    # optional per-post SEO overrides and FAQ block (rendered separately, with FAQPage schema)
+    schema = [bc, art]
+    faq_html = ""
+    if d.get("faq"):
+        schema.append({"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in d["faq"]]})
+        faq_html = f'<h2>{esc(d.get("faq_title", t["faq"]))}</h2>\n<div class="faq">' + "".join(f'<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in d["faq"]) + '</div>\n'
+    out = head(lang, path, d.get("seo_title", d["title"]) + " | SM Legal", d.get("seo_desc", d["excerpt"]), alt, og_type="article", schema=schema)
     out += header(lang, path, "insights", alt)
     out += '<div class="read-progress" aria-hidden="true"><span></span></div>'
     out += f"""<section class="page-hero dark"><div class="wrap">{c}
@@ -698,7 +704,7 @@ def build_post(x, lang):
     pr = P[x["practice"]]
     out += f"""<section class="section"><div class="wrap article-wrap">
 <article class="prose">{d['body']}
-<p class="disclaimer">{t['disclaimer']}</p>
+{faq_html}<p class="disclaimer">{t['disclaimer']}</p>
 <p style="font-size:.9rem;color:var(--muted)"><strong style="color:var(--ink)">{t['author']}</strong> — {t['author_role']}</p></article>
 <aside class="aside">
  <div class="aside-box aside-box--dark"><h3>{t['cta_band_h']}</h3><p>{t['cta_band_p']}</p><a class="btn" href="{rel(path, ROUTES['contact'][lang])}">{t['cta']}</a></div>
