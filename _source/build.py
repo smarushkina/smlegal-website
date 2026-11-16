@@ -703,7 +703,7 @@ def build_post(x, lang):
     others = [y for y in sorted_posts() if y is not x][:3]
     pr = P[x["practice"]]
     out += f"""<section class="section"><div class="wrap article-wrap">
-<article class="prose">{d['body']}
+<article class="prose{' prose--boldh' if x.get('bold_headings') else ''}">{d['body']}
 {faq_html}<p class="disclaimer">{t['disclaimer']}</p>
 <p style="font-size:.9rem;color:var(--muted)"><strong style="color:var(--ink)">{t['author']}</strong> — {t['author_role']}</p></article>
 <aside class="aside">

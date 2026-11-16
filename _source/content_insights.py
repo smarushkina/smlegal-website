@@ -295,7 +295,7 @@ INSIGHTS = [
  }
 },
 {
- "id": "eor", "type": "article", "date": "2026-11-16", "practice": "employment", "read": 7,
+ "id": "eor", "type": "article", "date": "2026-11-16", "practice": "employment", "read": 7, "bold_headings": True,
  "bg": {
   "slug": "employer-of-record-eor-v-balgariya",
   "title": "Employer of Record (EOR) в България: правна рамка, предимства и особености на модела",

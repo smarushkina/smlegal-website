@@ -267,6 +267,7 @@ strong{font-weight:600;color:var(--ink)}
 .article-wrap{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:72px;align-items:start}
 .prose{font-size:1.04rem;max-width:760px}
 .prose h2{font-size:1.85rem;margin-top:1.6em}
+.prose--boldh h2,.prose--boldh h3{font-weight:700}
 .prose h3{margin-top:1.4em}
 .prose ul{padding-left:0;list-style:none;margin:0 0 1.4em}
 .prose ul li{position:relative;padding-left:26px;margin-bottom:.6em}
