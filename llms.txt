@@ -1,0 +1,71 @@
+# SM Legal — Marushkina Law Firm (Адвокатско дружество Марушкина)
+
+> SM Legal is a business law firm in Sofia, Bulgaria, led by attorney-at-law Sylvia Marushkina (адв. Силвия Марушкина). It advises Bulgarian and foreign companies, start-ups, investors and individuals on corporate and commercial law, venture capital, employment and immigration (EU Blue Card, single permit), tax and VAT, compliance and AML, data protection (GDPR), intellectual property (trade marks in Bulgaria, the EU and under the Madrid System), real estate and dispute resolution. Advice is given in Bulgarian and English.
+
+- Website: https://smlegal.bg/ (Bulgarian), https://smlegal.bg/en/ (English)
+- Address: ул. „Добротица Деспот“ 41, 1612 София, България (41 Dobrotitsa Despot St., 1612 Sofia, Bulgaria)
+- Phone: +359 898 648 762
+- Email: smarushkina@smlegal.bg
+- Office hours: Monday–Friday, 9:30–18:00 (EET)
+- Languages: Bulgarian, English
+
+## Key pages
+
+- [About the firm and the team](https://smlegal.bg/en/about.html): mission, approach and profile of Sylvia Marushkina
+- [Practice areas overview](https://smlegal.bg/en/practice-areas.html): interactive guide to all 11 practice areas
+- [Insights](https://smlegal.bg/en/insights.html): articles and legal news
+- [Contact](https://smlegal.bg/en/contact.html): how to request a consultation
+
+## Practice areas (English)
+
+- [Commercial and Corporate Law](https://smlegal.bg/en/practice-areas/corporate-commercial-law.html): company formation, share deals, M&A, due diligence, capital changes, liquidation
+- [Venture Capital](https://smlegal.bg/en/practice-areas/venture-capital.html): funding rounds, term sheets, shareholders' agreements, convertible loans, ESOP
+- [Start-ups and Technology](https://smlegal.bg/en/practice-areas/startups-technology.html): founders' agreements, SaaS and software contracts, terms of use, AI Act
+- [Employment](https://smlegal.bg/en/practice-areas/employment-law.html): employment contracts, internal rules, terminations, hiring third-country nationals
+- [Immigration](https://smlegal.bg/en/practice-areas/immigration-law.html): EU Blue Card, single permit, long-term and permanent residence, family reunification
+- [Tax and VAT](https://smlegal.bg/en/practice-areas/tax-vat.html)
+- [Compliance and AML](https://smlegal.bg/en/practice-areas/compliance-aml.html): AML rules, KYC, ultimate beneficial owners, whistleblowing, NIS2
+- [Data Protection](https://smlegal.bg/en/practice-areas/data-protection-gdpr.html): GDPR policies, DPAs, DPIAs, data transfers
+- [Intellectual Property](https://smlegal.bg/en/practice-areas/intellectual-property.html): trade mark registration in Bulgaria, EUIPO and WIPO (Madrid System), oppositions
+- [Real Estate](https://smlegal.bg/en/practice-areas/real-estate.html): property due diligence, transactions, leases, acquisition by foreigners
+- [Dispute Resolution](https://smlegal.bg/en/practice-areas/dispute-resolution.html): litigation, mediation, arbitration, debt collection
+
+## Insights (English)
+
+- [Hiring Employees in Bulgaria without a Local Company](https://smlegal.bg/en/insights/hiring-employees-in-bulgaria-without-local-company.html)
+- [Employer of Record (EOR) in Bulgaria: Legal Framework](https://smlegal.bg/en/insights/employer-of-record-eor-bulgaria-legal-framework.html)
+- [EU Blue Card in Bulgaria: A Guide for Employers](https://smlegal.bg/en/insights/eu-blue-card-bulgaria-employer-guide.html)
+- [Ultimate Beneficial Owners: Company Obligations](https://smlegal.bg/en/insights/ultimate-beneficial-owners-company-obligations-bulgaria.html)
+- [National, EU or International Trade Mark — How to Choose](https://smlegal.bg/en/insights/national-eu-or-international-trade-mark-how-to-choose.html)
+- [NIS2 in Bulgaria: New Obligations under the Cybersecurity Act](https://smlegal.bg/en/insights/nis2-bulgaria-new-cybersecurity-act.html)
+- [Convertible Loan or Equity: Structuring a Start-up's First Funding Round](https://smlegal.bg/en/insights/convertible-loan-or-equity-structuring-startup-funding.html)
+- [Extended Deadline for Converting Share Capital into Euro](https://smlegal.bg/en/insights/extended-deadline-share-capital-euro-conversion.html)
+
+## Правни услуги (български)
+
+- [Търговско и корпоративно право](https://smlegal.bg/pravni-uslugi/targovsko-i-korporativno-pravo.html)
+- [Рисков (венчър) капитал](https://smlegal.bg/pravni-uslugi/venchar-kapital.html)
+- [Стартъпи и информационни технологии](https://smlegal.bg/pravni-uslugi/startapi-i-tehnologii.html)
+- [Трудово право](https://smlegal.bg/pravni-uslugi/trudovo-pravo.html)
+- [Имиграционно право](https://smlegal.bg/pravni-uslugi/imigratsionno-pravo.html)
+- [Данъци и ДДС](https://smlegal.bg/pravni-uslugi/danatsi-i-dds.html)
+- [Корпоративно съответствие и AML](https://smlegal.bg/pravni-uslugi/compliance-i-aml.html)
+- [Защита на личните данни](https://smlegal.bg/pravni-uslugi/zashtita-na-lichnite-danni.html)
+- [Интелектуална собственост](https://smlegal.bg/pravni-uslugi/intelektualna-sobstvenost.html)
+- [Недвижими имоти](https://smlegal.bg/pravni-uslugi/nedvizhimi-imoti.html)
+- [Решаване на спорове](https://smlegal.bg/pravni-uslugi/reshavane-na-spori.html)
+
+## Публикации (български)
+
+- [Наемане на служители в България без местно дружество](https://smlegal.bg/publikatsii/naemane-na-sluzhiteli-v-balgariya-bez-mestno-druzhestvo.html)
+- [Employer of Record (EOR) в България: правна рамка](https://smlegal.bg/publikatsii/employer-of-record-eor-v-balgariya.html)
+- [Синя карта на ЕС в България: ръководство за работодатели](https://smlegal.bg/publikatsii/sinya-karta-na-es-v-balgariya-rakovodstvo-za-rabotodateli.html)
+- [Действителни собственици: задълженията на дружествата](https://smlegal.bg/publikatsii/deystvitelni-sobstvenitsi-zadalzheniya-na-druzhestvata.html)
+- [Национална, европейска или международна търговска марка — как да изберем](https://smlegal.bg/publikatsii/natsionalna-evropeyska-ili-mezhdunarodna-targovska-marka.html)
+- [NIS2 в България: новите задължения по Закона за киберсигурност](https://smlegal.bg/publikatsii/nis2-nov-zakon-za-kibersigurnost.html)
+- [Конвертируем заем или дялове: финансиране на стартъп](https://smlegal.bg/publikatsii/konvertiruem-zaem-ili-dyalove-finansirane-na-startap.html)
+- [Удължен срок за преобразуване на капитала в евро](https://smlegal.bg/publikatsii/prodalzhen-srok-preobrazuvane-kapital-evro.html)
+
+## Notes
+
+The articles on this site are for general information and do not constitute legal advice. For advice on a specific matter, contact the firm.
