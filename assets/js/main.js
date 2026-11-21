@@ -122,6 +122,12 @@
     if(navigator.clipboard){navigator.clipboard.writeText(v).then(done,function(){location.href='mailto:'+v});}else{location.href='mailto:'+v;}
   });});
 
+  /* lead tracking: email, phone and copy-address clicks (sent only if GA loaded after consent) */
+  d.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="mailto:"],a[href^="tel:"],[data-copy]');
+    if(!a||typeof window.gtag!=='function')return;var h=a.getAttribute('href')||'';
+    var m=h.indexOf('tel:')===0?'phone':(a.hasAttribute('data-copy')?'copy_email':'email');
+    window.gtag('event','generate_lead',{method:m,page_path:location.pathname});},true);
+
   /* cookie consent (GDPR): necessary only by default; analytics only after opt-in */
   var w=window,ck=d.getElementById('cookie');
   if(ck){
