@@ -914,3 +914,9 @@ html[lang="en"] .hub__faq.is-open::after{content:"Show less ↑"}
 #ekip h3,#team h3{margin-top:18px !important;margin-bottom:10px}
 #ekip .tags,#team .tags{margin-bottom:18px}
 @media (max-width:760px){.hero__grid,.hero__grid--solo{padding-top:24px;padding-bottom:70px}#ekip .portrait,#team .portrait{max-width:220px}}
+/* Mottos moved from Home to About (23.11.2026) */
+.mottos--about{margin-top:0;padding:0 0 56px;background:var(--bg)}
+.hero__grid,.hero__grid--solo{padding-bottom:44px}
+.hero + .section{padding-top:40px}
+@media (max-width:760px){.hero__grid,.hero__grid--solo{padding-bottom:34px}.mottos--about{padding-bottom:40px}}
+.section:has(+ .mottos--about){padding-bottom:26px}
