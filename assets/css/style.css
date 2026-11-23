@@ -954,3 +954,18 @@ html[lang="en"] .hub__faq.is-open::after{content:"Show less ↑"}
 .cta-band h2{font-size:clamp(1.2rem,1.7vw,1.45rem);margin-bottom:2px}
 .cta-band p{font-size:.88rem}
 .section--slate + .cta-band{border-top:1px solid rgba(243,194,177,.18)}
+/* grey band — further reduced (23.11.2026) */
+.section--slate{padding:22px 0 22px}
+.section--slate .sec-head{display:flex;align-items:baseline;gap:22px;margin-bottom:14px}
+.section--slate .sec-head .eyebrow{margin:0;flex:none}
+.section--slate .sec-head h2{font-size:1.15rem}
+.section--slate .steps{gap:22px}
+.section--slate .step{padding-top:10px}
+.section--slate .step::before{font-size:1rem}
+.section--slate .step h3{font-size:.95rem}
+.section--slate .step p{font-size:.8rem;line-height:1.5;margin-top:4px}
+.cta-band{padding:18px 0}
+.cta-band h2{font-size:1.15rem;margin:0}
+.cta-band p{font-size:.84rem}
+.cta-band .btn{padding-top:12px;padding-bottom:12px}
+@media (max-width:900px){.section--slate .sec-head{display:block}.section--slate .sec-head .eyebrow{margin-bottom:6px}}
