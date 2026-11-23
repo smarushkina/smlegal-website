@@ -851,3 +851,20 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:manual}
 .hub__faq .hub__q{font-size:.95rem;margin-bottom:4px;line-height:1.4}
 .hub__faq p{font-size:.86rem;line-height:1.6}
 .hub__related{align-self:stretch;justify-content:center}
+/* list and panel share one height; FAQ answer clamped (23.11.2026) */
+@media (min-width:1081px){
+  .hub__grid{align-items:stretch}
+  .hub__tabs{height:100%}
+  .hub__tabs button{flex:1 1 auto}
+}
+.hub__faq{cursor:pointer;position:relative}
+.hub__faq p:not(.hub__faq-l):not(.hub__q){display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3;overflow:hidden}
+.hub__faq.is-open p:not(.hub__faq-l):not(.hub__q){display:block;-webkit-line-clamp:unset;overflow:visible}
+.hub__faq::after{content:"Прочетете целия отговор ↓";display:block;margin-top:6px;font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--rose-ink)}
+html[lang="en"] .hub__faq::after{content:"Read the full answer ↓"}
+.hub__faq.is-open::after{content:"Скрий ↑"}
+html[lang="en"] .hub__faq.is-open::after{content:"Show less ↑"}
+.hub__faq:focus-visible{outline:2px solid var(--rose-d);outline-offset:2px}
+@media (min-width:1081px){.hub__tabs button{flex:1 1 0}}
+.hub__faq.is-full{cursor:default}
+.hub__faq.is-full::after{display:none}

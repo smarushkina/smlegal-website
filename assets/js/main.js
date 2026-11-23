@@ -157,3 +157,20 @@
     var cur=read();if(cur)apply(cur);else show();
   }
 })();
+/* Practice hub: FAQ answer clamped to 3 lines, click to expand (23.11.2026) */
+(function(){
+  function fit(){document.querySelectorAll('.hub__faq').forEach(function(f){
+    if(f.classList.contains('is-open'))return;
+    var a=f.querySelector('p:not(.hub__faq-l):not(.hub__q)');
+    var full=a&&a.offsetParent!==null&&a.scrollHeight<=a.clientHeight+1;
+    if(a&&a.offsetParent!==null){f.classList.toggle('is-full',full);if(full){f.removeAttribute('role');f.removeAttribute('tabindex');f.removeAttribute('aria-expanded');}else{f.setAttribute('role','button');f.setAttribute('tabindex','0');f.setAttribute('aria-expanded','false');}}
+  });}
+  document.querySelectorAll('.hub__faq').forEach(function(f){
+    f.setAttribute('tabindex','0');f.setAttribute('role','button');f.setAttribute('aria-expanded','false');
+    function t(){if(f.classList.contains('is-full'))return;var o=f.classList.toggle('is-open');f.setAttribute('aria-expanded',o?'true':'false');}
+    f.addEventListener('click',t);
+    f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();t();}});
+  });
+  fit();window.addEventListener('resize',fit);
+  document.querySelectorAll('.hub__tabs [role=tab],.hub__steps button').forEach(function(b){b.addEventListener('click',function(){setTimeout(fit,30)})});
+})();
