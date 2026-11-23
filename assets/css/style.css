@@ -920,3 +920,17 @@ html[lang="en"] .hub__faq.is-open::after{content:"Show less ↑"}
 .hero + .section{padding-top:40px}
 @media (max-width:760px){.hero__grid,.hero__grid--solo{padding-bottom:34px}.mottos--about{padding-bottom:40px}}
 .section:has(+ .mottos--about){padding-bottom:26px}
+/* Home principles as a list of terms, no boxes (23.11.2026) */
+.values{display:block;background:none;border:0;counter-reset:val;align-self:center}
+.value{background:none;padding:16px 0 16px 64px;border-top:1px solid var(--line);counter-increment:val;transition:padding .35s var(--ease)}
+.value:last-child{border-bottom:1px solid var(--line)}
+.value::before{content:counter(val,decimal-leading-zero);left:0;top:18px;width:auto;height:auto;background:none;font-family:var(--display);font-weight:300;font-size:1.5rem;line-height:1;color:var(--rose-d);transition:color .3s}
+.value:hover::before{width:auto;color:var(--rose-ink)}
+.value::after{content:"";position:absolute;left:0;bottom:-1px;width:0;height:1px;background:var(--rose-d);transition:width .5s var(--ease)}
+.value:hover::after{width:100%}
+.value:hover{background:none;padding-left:72px}
+.value h3{font-size:1.15rem;margin:0 0 4px;color:var(--ink)}
+.value p{font-size:.9rem;line-height:1.6;color:var(--muted);margin:0}
+@media (max-width:760px){.value{padding:14px 0 14px 50px}.value:hover{padding-left:50px}.value::before{font-size:1.25rem;top:16px}}
+.hero + .section .grid-2{align-items:center}
+.hero + .section .grid-2 h2 + .link-arrow{display:inline-flex;margin-top:14px}
