@@ -934,3 +934,8 @@ html[lang="en"] .hub__faq.is-open::after{content:"Show less ↑"}
 @media (max-width:760px){.value{padding:14px 0 14px 50px}.value:hover{padding-left:50px}.value::before{font-size:1.25rem;top:16px}}
 .hero + .section .grid-2{align-items:center}
 .hero + .section .grid-2 h2 + .link-arrow{display:inline-flex;margin-top:14px}
+/* principles without numbering (23.11.2026) */
+.value{padding-left:0}
+.value::before{content:none}
+.value:hover{padding-left:10px}
+@media (max-width:760px){.value,.value:hover{padding-left:0}}
