@@ -868,3 +868,9 @@ html[lang="en"] .hub__faq.is-open::after{content:"Show less ↑"}
 @media (min-width:1081px){.hub__tabs button{flex:1 1 0}}
 .hub__faq.is-full{cursor:default}
 .hub__faq.is-full::after{display:none}
+/* compact page banner: За нас, Правни услуги, Публикации (23.11.2026) */
+.page-hero--compact{padding:22px 0 24px}
+.page-hero--compact .crumbs{margin-bottom:6px}
+.page-hero--compact h1{font-size:clamp(1.6rem,2.4vw,2.1rem);margin-bottom:6px;line-height:1.2}
+.page-hero--compact p{font-size:.92rem;max-width:980px;line-height:1.55}
+@media (max-width:760px){.page-hero--compact{padding:18px 0 20px}.page-hero--compact p{font-size:.88rem}}
